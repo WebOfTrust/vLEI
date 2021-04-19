@@ -1,0 +1,29 @@
+{
+  "type": "object",
+    "properties":
+    {
+      "@context": { "type": "array" },
+      "id": { "type": "string" },
+      "type": { "type": "array" },
+      "issuer": { "type": "string" },
+      "issuanceDate": { "type": "string", "format": "date" },
+      "credentialSubject": { "type": "object",
+        "properties":
+        {
+          "id": { "type": "string" },
+          "lei": { "type": "string", "format": "lei" }
+        },
+      "proof": { "type": "object",
+        "properties":
+        {
+          "type": { "type": "string" },
+          "created": { "type": "string", "format": "date" },
+          "proofPurpose": { "type": "string" },
+          "verificationMethod": { "type": "string" },
+          "jws": { "type": "string" }
+        }
+    }
+}
+
+
+

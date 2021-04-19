@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "id": "did:keri:Evdshjvf7sdvfisdfkks/vLEILegalEntityEngagementContextPersonRoleCredential", // DID of the verifiable credential itself
+  "type": ["VerifiableCredential", "vLEILegalEntityEngagementContextPersonRoleCredential"], // type of the verifiable credential
+  "issuer": "did:keri:Ejksbdfugdsidsigsdg/LegalEntityRootID", // issuer of the verifiable credential
+  "issuanceDate": "2021-02-10T17:50:24Z", // date of issuance
+  "credentialSubject": {
+    "id": "did:keri:Edsjf7disgfibdsfbsfsd/LegalEntityEngagementContextPersonRoleID", // DID of the issuee / holder
+    "lei": "254900OPPU84GM83MG36", // LEI
+    "person_legal_name": "John Smith", // person legal name
+    "engagement_context_role": "Project Manager" // engagement context role
+  },
+  "proof": {
+    "type": "Ed25519Signature2018", // signature type (Sam to confirm year, i.e. 2018 or different)
+    "created": "2021-02-18T21:19:10Z", // date of creation of signature (Sam to provide anchor to KEL part)
+    "proofPurpose": "assertionMethod", // purpose of this proof
+    "verificationMethod": "https://example.edu/issuers/keys/1", // identifier of the public key that can verify the signature
+    "jws": "gd7sgf7igdsfudsfhh" // signature
+  }
+}
