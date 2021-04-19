@@ -1,17 +1,27 @@
 {
-  "@context": [
+  "@context": 
+  [
     "https://www.w3.org/2018/credentials/v1"
   ],
   "id": "did:keri:Esd8ghskgih84ihgs/vLEILegalEntityCredential", // DID of the verifiable credential itself
-  "type": ["VerifiableCredential", "vLEILegalEntityCredential"], // type of the verifiable credential
+  "type": 
+  [
+    "VerifiableCredential", 
+    "vLEILegalEntityCredential"
+  ], // type of the verifiable credential
   "issuer": "did:keri:Ejnfkjsngsdg7his7dg/LEIIssuerRootID", // issuer of the verifiable credential
   "issuanceDate": "2021-02-10T17:50:24Z", // date of issuance
-  "credentialSubject": {
+  "credentialSubject": 
+  {
     "id": "did:keri:Ejksbdfugdsidsigsdg/LegalEntityRootID", // DID of the issuee / holder
     "lei": "254900OPPU84GM83MG36" // LEI
   },
-  "proof": {
-    "type": "Ed25519Signature2018", // signature type (Sam to confirm year, i.e. 2018 or different)
+  "proof": 
+  {
+    "type": 
+    [
+      "Ed25519Signature2018"
+    ], // signature type (Sam to confirm year, i.e. 2018 or different)
     "created": "2021-02-18T21:19:10Z", // date of creation of signature (Sam to provide anchor to KEL part)
     "proofPurpose": "assertionMethod", // purpose of this proof
     "verificationMethod": "https://example.edu/issuers/keys/1", // identifier of the public key that can verify the signature
