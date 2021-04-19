@@ -21,7 +21,7 @@
     "issuanceDate": 
     {
       "type": "string", 
-      "format": "date"
+      "format": "date-time"
     },
     "credentialSubject": 
     { 
@@ -46,12 +46,12 @@
       {
         "type": 
         {
-          "type": "string"
+          "type": "array"
         },
         "created": 
         {
           "type": "string", 
-          "format": "date"
+          "format": "date-time"
         },
         "proofPurpose": 
         {
@@ -59,13 +59,13 @@
         },
         "verificationMethod": 
         { 
-          "type": "string"},
-          "jws": 
-          {
-            "type": "string"
-          }
+          "type": "string"
+        },
+        "jws": 
+        {
+          "type": "string"
         }
       }
     }
-
+  }
 }
