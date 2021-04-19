@@ -1,0 +1,12 @@
+base VC for lei
+
+
+// Need issuanceDate to future proof indy
+// Need indy array properties
+// Indy tooling creates and registers a schema but its just an array
+// Future proof for JSON-LD is to define @context not JSON schema
+//official vc vocabulary
+// https://github.com/w3c/vc-data-model/blob/main/vocab/credentials.jsonld
+// credentialSubject.id
+// credentialSubject.lei
+// 
