@@ -21,8 +21,8 @@
     "type": 
     [
       "Ed25519Signature2018"
-    ], // signature type (Sam to confirm year, i.e. 2018 or different)
-    "created": "2021-02-18T21:19:10Z", // date of creation of signature (Sam to provide anchor to KEL part)
+    ], 
+    "created": "2021-02-18T21:19:10Z", 
     "proofPurpose": "assertionMethod", // purpose of this proof
     "verificationMethod": "https://example.edu/issuers/keys/1", // identifier of the public key that can verify the signature
     "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQ" // signature
