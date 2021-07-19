@@ -1,0 +1,20 @@
+attrs==21.2.0
+blake3==0.2.0
+cbor2==5.4.0
+click==8.0.1
+daemonocle==1.2.3
+falcon==3.0.1
+hio==0.4.2
+jsonschema==3.2.0
+-e git+git@github.com:WebOfTrust/keripy.git@7169f176e4250f89c46aa6657e8c6abe5b8a0887#egg=keri
+lmdb==1.2.1
+msgpack==1.0.2
+multicommand==0.1.1
+multidict==5.1.0
+netifaces==0.11.0
+orderedset==2.0.3
+psutil==5.8.0
+pyrsistent==0.18.0
+pysodium==0.7.9
+simplejson==3.17.3
+six==1.16.0
