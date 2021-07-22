@@ -17,7 +17,7 @@ def main():
 
     for f, d in schemaCache.items():
         with open(f, 'w') as f:
-            f.write(json.dumps(scheming.Schemer(sed=d).sed, indent=4, sort_keys=True))
+            f.write(json.dumps(scheming.Schemer(sed=d).sed, indent=2))
 
 
 def cache(path, d):
