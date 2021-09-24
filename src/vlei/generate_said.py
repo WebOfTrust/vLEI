@@ -16,8 +16,9 @@ def main():
     schemaCache = cache(f'{path}/../../schema/', dict())
 
     for f, d in schemaCache.items():
-        with open(f, 'w') as f:
-            f.write(json.dumps(scheming.Schemer(sed=d).sed, indent=2))
+        with open(f, 'w') as s:
+            schemer = scheming.Schemer(sed=d)
+            s.write(json.dumps(schemer.sed, indent=2))
 
 
 def cache(path, d):
