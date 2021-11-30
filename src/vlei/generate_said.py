@@ -18,6 +18,8 @@ def main():
     for f, d in schemaCache.items():
         with open(f, 'w') as s:
             schemer = scheming.Schemer(sed=d)
+            if "acdc" in f:
+                print('"{}": {},'.format(schemer.said, schemer.raw))
             s.write(json.dumps(schemer.sed, indent=2))
 
 
