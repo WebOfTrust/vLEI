@@ -1,0 +1,50 @@
+sequenceDiagram %% QVI vLEI Issuance
+    %% participants
+    participant GOI as GLEIF Out of band - Insecure
+    participant GDS as GLEIF Desktop Software - Secure
+    participant QDS as QVI Desktop Software - Secure
+    participant QOI as QVI Out of band - Insecure
+
+    Note over GOI,QOI: vLEI Issuer Qualification Agreement has been executed by GLEIF    
+
+    Note over GOI,QOI: A GLEIF Authorized Representative(GAR) MUST perform identity assurance of a person<br/>serving in the role of QAR.
+    Alt identity assurance
+        GOI ->> GOI: Success
+    else
+        GOI -X QOI: Abandon
+    end
+
+    Note over GOI,QOI: The GAR MUST perform manual verification of the QAR’s legal identity for which the GAR has already performed Identity Assurance. 
+    Alt manual verififcation
+        GOI ->> GOI: Success
+    else
+        GOI -X QOI: Abandon
+    end
+
+    Note over GOI,QOI: The QAR and GAR MUST use an OOBI protocol (such as a QR code) to share the GLEIF KERI DID with the QAR.
+
+    QOI ->> QOI: Generate identifier QR code
+    QOI ->> GOI: Send via video conference session
+    GOI ->> GDS: Add unverified contact
+
+    Note over GOI, QOI: The GAR MUST send a Challenge Message to the QVI KERI DID as defined in the Technical Requirements Part 1 for the purposes of cryptographic authentication of the QVI KERI DID.
+
+    GDS ->> GDS: Generate 12 word BIPs challenge message
+    GDS ->> GOI: Copy challenge to video conference chat
+    GOI ->> QOI: Send challenge passphrase
+    QOI ->> GOI: Verbally acknowledge receipt of passphrase
+    QOI ->> QDS: Enter challenege passphrase
+
+    Note over GDS, QDS: The QAR MUST use its Private Key Store to sign<br> and return a Challenge Response Message,<br> after which the QAR must acknowledge<br> that this action has been completed.
+
+    QDS ->> GDS: Create signed challenge response containing challenge message
+
+    alt Verify challenge response and signature
+        GDS ->> GDS: Save QAR as verified contact
+    else
+        GDS ->> GOI: Abandon
+    end
+
+    Note over GOI, QOI: The GAR approves the issuance of the QVI vLEI Credential and the QVI receives the credential in its credential wallet.
+    Note over GOI: Retention/records management of documentation<br>submitted with issuance request
+    Note over GOI: GLEIF adds the LEI of the QVI to the process<br>to monitor that the status of LEIs used within vLEIs<br>(requirement to remain Issued and Active within the GLEIS)```
