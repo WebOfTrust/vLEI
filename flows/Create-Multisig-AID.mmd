@@ -1,0 +1,45 @@
+sequenceDiagram %% Create GLEIF Root AID
+    participant C1 as Controller 1
+    participant A1 as GLEIF vLEI Software 1
+    participant A2 as GLEIF vLEI Software 2
+    participant C2 as Controller 2
+
+    note over C1, C2: Begin OOBI session and mutually verify legal identities of all Controllers
+
+    par
+        C1->+A1: Generate AID
+        C2->+A2: Generate AID
+    and
+        A1->-C1: Done
+        A2->-C2: Done
+    end
+
+    note over C1, C2: Mutually share AIDs & endpoints via QR Codes or live chat
+
+    C1->+A1: Begin challenge
+    A1->-A2: Challenge message
+    A2->C2: Verify?
+    C2->+A2: Sign
+    A2->-A1: Signed challenge
+    activate A1
+    A1->-C1: Verified
+
+    note over C1, C2: Complete mutual challenge messages for all Controllers
+
+    par
+        C1->+A1: Generate Multisig inception
+        C2->+A2: Generate Multisig inception
+    and
+        A1->-C1: Done
+        A2->-C2: Done
+    end
+
+    loop collect multisig events
+        A1->A2: Distrubite mutlisig
+    end
+
+    note over A1, A2: Mutlisig election based off lowest index<br>in incepting multisig event
+
+    A1->A1: Multisig election
+
+    A1->>A2: Multsig inception distribution

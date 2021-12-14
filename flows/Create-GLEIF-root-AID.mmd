@@ -1,0 +1,43 @@
+sequenceDiagram %% Create GLEIF Root AID
+    participant W1 as Witness 1
+    participant C1 as Controller 1
+    participant A1 as GLEIF vLEI Software 1
+    participant A2 as GLEIF vLEI Software 2
+    participant C2 as Controller 2
+    participant W2 as Witness 2
+
+    note over C1, C2: Begin OOBI session and mutually verify legal identities of all Controllers
+
+    par
+        C1->+A1: Generate AID
+        C2->+A2: Generate AID
+    and
+        A1->-C1: Done
+        A2->-C2: Done
+    end
+
+    note over C1, C2: Mutually share AIDs & endpoints via QR Codes or live chat
+
+    C1->+A1: Begin challenge
+    A1->-A2: Challenge message
+    A2->C2: Verify?
+    C2->+A2: Sign
+    A2->-A1: Signed challenge
+    activate A1
+    A1->-C1: Verified
+
+    note over C1, C2: Complete mutual challenge messages for all Controllers
+
+    C1->C1: Select AIDs & Endpoints for all Controllers and GLEIF Witness Pool
+    C1->+A1: Generate GLEIF AID inception event
+    A1->-W1: Inception event
+    W1->W1: Sign
+    A1->+A2: Inception event
+    A2->C2: Verify
+    C2->C2: Verify inception event
+    C2->+A2: Sign
+    A2->-W1: Signed inception event
+    A2->-A1: Signed inception event
+    A1->C1: First Controller complete
+    
+    note over C1, C2: Complete inception event signatures for all Witnesses and Controllers

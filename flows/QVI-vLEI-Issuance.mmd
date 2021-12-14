@@ -5,20 +5,24 @@ sequenceDiagram %% QVI vLEI Issuance
     participant QDS as QVI Desktop Software - Secure
     participant QOI as QVI Out of band - Insecure
 
+    Note over GOI,QOI: The vLEI Issuer Qualification Agreement has been executed by GLEIF and a Designated Authorized Representative (DAR) of the QVI.<br>The DAR of the QVI must designate a QVI Authorized Representative (QAR) to act on its behalf in the process to issue the Qualified vLEI Issuer vLEI Credential.
+
+    Note over GOI,QOI: A credential wallet MUST be set up for the QVI.
+
     Note over GOI,QOI: vLEI Issuer Qualification Agreement has been executed by GLEIF    
 
-    Note over GOI,QOI: A GLEIF Authorized Representative(GAR) MUST perform identity assurance of a person<br/>serving in the role of QAR.
+    Note over GOI,QOI: A GLEIF Authorized Representative 
     Alt identity assurance
-        GOI ->> GOI: Success
+        GOI->-GOI: Success
     else
-        GOI -X QOI: Abandon
+        GOI-XQOI: Abandon
     end
 
     Note over GOI,QOI: The GAR MUST perform manual verification of the QAR’s legal identity for which the GAR has already performed Identity Assurance. 
     Alt manual verififcation
-        GOI ->> GOI: Success
+        GOI->>GOI: Success
     else
-        GOI -X QOI: Abandon
+        GOI-XQOI: Abandon
     end
 
     Note over GOI,QOI: The QAR and GAR MUST use an OOBI protocol (such as a QR code) to share the GLEIF KERI DID with the QAR.
