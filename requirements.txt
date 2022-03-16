@@ -1,29 +1,11 @@
-attrs==21.2.0
-blake3==0.1.8
-cbor2==5.4.0
-click==8.0.1
-daemonocle==1.2.3
-falcon==3.0.1
-hio==0.4.3
-iniconfig==1.1.1
-jsonschema==3.2.0
-keri==0.5.1
-lmdb==1.2.1
-msgpack==1.0.2
-multicommand==0.1.1
-multidict==5.1.0
-netifaces==0.11.0
-orderedset==2.0.3
-packaging==21.0
-pluggy==0.13.1
-psutil==5.8.0
-py==1.10.0
-pyparsing==2.4.7
-pyrsistent==0.18.0
-pysodium==0.7.9
-pytest==6.2.4
-pytest-expect==1.1.0
-simplejson==3.17.3
-six==1.16.0
-toml==0.10.2
-u-msgpack-python==2.7.1
+# requirements.txt
+# Best practices for setup.py vs requirements.txt
+# https://caremad.io/posts/2013/07/setup-vs-requirement/
+# https://pip.pypa.io/en/stable/reference/pip_install/#install-index-url
+
+# enables pip install -r requirements.txt  to work with setup.py dependencies
+# pull the dependencies from setup.py for keri from pip index
+--index-url https://pypi.org/simple/   # pypi base pip index or local pip index
+
+--editable .  # install as editable
+
