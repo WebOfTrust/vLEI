@@ -19,7 +19,9 @@ def main():
         with open(f, 'w') as s:
             schemer = scheming.Schemer(sed=d)
             if "acdc" in f:
-                print('"{}": {},'.format(schemer.said, schemer.raw))
+                f = open(schemer.said, "wb")
+                f.write(schemer.raw)
+                f.close()
             s.write(json.dumps(schemer.sed, indent=2))
 
 
