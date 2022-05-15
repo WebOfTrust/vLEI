@@ -36,6 +36,10 @@ def launch(args):
     doist.do(doers=doers)
 
 
-if __name__ == "__main__":
+def main():
     args = parser.parse_args()
     launch(args)
+
+
+if __name__ == "__main__":
+    main()

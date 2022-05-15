@@ -63,7 +63,7 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    python_requires='>=3.9.7',
+    python_requires='>=3.10.4',
     install_requires=[
                         'lmdb>=1.2.1',
                         'pysodium>=0.7.9',
@@ -71,7 +71,7 @@ setup(
                         'msgpack>=1.0.2',
                         'cbor2>=5.4.1',
                         'multidict>=5.1.0',
-                        'orderedset>=2.0.3',
+                        'ordered-set>=4.1.0',
                         'hio>=0.5.8',
                         'multicommand>=0.1.1',
                         'jsonschema>=3.2.0',
@@ -81,7 +81,7 @@ setup(
                         'PyYaml>=6.0',
                         'apispec>=5.1.1',
                         'mnemonic>=0.20',
-                        'keri>=0.5.1',
+                        'keri>=0.6.6',
     ],
     extras_require={
     },
@@ -92,6 +92,10 @@ setup(
     setup_requires=[
     ],
     entry_points={
+        'console_scripts': [
+            'vLEI-generate = vlei.generate:main',
+            'vLEI-server = vlei.server:main'
+        ]
     },
 )
 

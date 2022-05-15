@@ -1,0 +1,183 @@
+{
+  "$id": "Ec7NSIUfktTAofFOSaXhnKHdOqoILdSLvvMtin9uQk_s",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "iXBRL Data Value Attestation",
+  "description": "A data attestation against an iXBRL report, linked to either a vLEI OOR or vLEI ECR credential",
+  "credentialType": "iXBRLDataAttestation",
+  "properties": {
+    "v": {
+      "type": "string"
+    },
+    "d": {
+      "type": "string"
+    },
+    "i": {
+      "type": "string"
+    },
+    "ri": {
+      "description": "credential status registry",
+      "type": "string"
+    },
+    "s": {
+      "description": "schema SAID",
+      "type": "string"
+    },
+    "a": {
+      "description": "data block",
+      "properties": {
+        "d": {
+          "type": "string"
+        },
+        "dt": {
+          "description": "signed date time",
+          "format": "date-time",
+          "type": "string"
+        },
+        "rd": {
+          "type": "string",
+          "description": "Digest of entire signed iXBRL report"
+        },
+        "a": {
+          "description": "Signed attributes of report",
+          "items": {
+            "type": "object",
+            "properties": {
+              "i": {
+                "type": "string",
+                "description": "XBRL data element ID"
+              },
+              "t": {
+                "type": "string",
+                "description": "XBRL element type (qname)"
+              },
+              "d": {
+                "type": "string",
+                "description": "Digest of canonicalized XBRL attribute"
+              },
+              "v": {
+                "type": "string",
+                "description": "Data value"
+              },
+              "f": {
+                "type": "string",
+                "description": "Data type"
+              },
+              "c": {
+                "type": "string",
+                "description": "XBRL Element Context"
+              },
+              "e": {
+                "type": "string",
+                "description": "Unknown"
+              },
+              "p": {
+                "type": "string",
+                "description": "Date range"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "t",
+              "d",
+              "v",
+              "c",
+              "e",
+              "p"
+            ]
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "d",
+        "dt",
+        "rd",
+        "a"
+      ],
+      "type": "object"
+    },
+    "e": {
+      "oneOf": [
+        {
+          "description": "Chained vLEI OOR Credential",
+          "properties": {
+            "d": {
+              "description": "SAID of edge block containing OOR Credential node",
+              "type": "string"
+            },
+            "oor": {
+              "description": "node SAID of signer OOR credential",
+              "properties": {
+                "n": {
+                  "type": "string"
+                },
+                "s": {
+                  "type": "string",
+                  "description": "SAID of required schema of the credential pointed to by this node",
+                  "const": "E2RzmSCFmG2a5U2OqZF-yUobeSYkW-a3FsN82eZXMxY0"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "n",
+                "s"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "d",
+            "oor"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Chained vLEI ECR Credential",
+          "properties": {
+            "d": {
+              "description": "SAID of edge block contai0ning ECR Credential node",
+              "type": "string"
+            },
+            "ecr": {
+              "description": "node SAID of signer ECR credential",
+              "properties": {
+                "n": {
+                  "type": "string"
+                },
+                "s": {
+                  "type": "string",
+                  "description": "SAID of required schema of the credential pointed to by this node",
+                  "const": "ECr_axOPYff2VQl98Dx9n2-mwFSK4zD5ak88S-tJiJP0"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "n",
+                "s"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "d",
+            "ecr"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "i",
+    "ri",
+    "s",
+    "d",
+    "e"
+  ],
+  "type": "object"
+}
