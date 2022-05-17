@@ -29,6 +29,6 @@ pytest
 To generate new SAIDs for updates schema run:
 
 ```shell
-python3 src/vlei/generate_said.py
+python3 src/vlei/generate.py
 ```
 
