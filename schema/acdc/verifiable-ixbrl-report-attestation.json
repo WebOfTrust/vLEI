@@ -1,5 +1,5 @@
 {
-  "$id": "Ec7NSIUfktTAofFOSaXhnKHdOqoILdSLvvMtin9uQk_s",
+  "$id": "Ehwr6tZh6XakKBKWQW07otQ9uCwg0g7CF-dPz9qb_fwQ",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "iXBRL Data Value Attestation",
   "description": "A data attestation against an iXBRL report, linked to either a vLEI OOR or vLEI ECR credential",
@@ -37,8 +37,8 @@
           "type": "string",
           "description": "Digest of entire signed iXBRL report"
         },
-        "a": {
-          "description": "Signed attributes of report",
+        "f": {
+          "description": "Signed facts of report",
           "items": {
             "type": "object",
             "properties": {
@@ -94,7 +94,7 @@
         "d",
         "dt",
         "rd",
-        "a"
+        "f"
       ],
       "type": "object"
     },
