@@ -19,7 +19,7 @@ parser.add_argument('-p', '--http',
 parser.add_argument('-s', '--schema-dir',
                     action='store', dest="schemaDir",
                     required=True,
-                    help="Directoiry of schema to serve")
+                    help="Directory of schema to serve")
 parser.add_argument('-c', '--cred-dir',
                     action='store', dest="credDir",
                     required=True,

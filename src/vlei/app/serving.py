@@ -34,6 +34,12 @@ class SchemaEnd:
             return
 
 
+class WellknownEnd:
+
+    def on_get(self, req, rep):
+        raise falcon.HTTPMovedPermanently("http://127.0.0.1:5642/oobi/E4tEHaAAg8LbvdyUwxchP9WO_lZ2vtXyyFFKmTxVGY9U/witness/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo")
+
+
 def loadEnds(app, schemaDir, credDir):
 
     sink = http.serving.StaticSink(staticDirPath="./static")
@@ -41,3 +47,6 @@ def loadEnds(app, schemaDir, credDir):
 
     schemaEnd = SchemaEnd(schemaDir=schemaDir, credDir=credDir)
     app.add_route("/oobi/{said}", schemaEnd)
+
+    wellknownEnd = WellknownEnd()
+    app.add_route("/.well-known/keri/oobi/E4tEHaAAg8LbvdyUwxchP9WO_lZ2vtXyyFFKmTxVGY9U", wellknownEnd)
