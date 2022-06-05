@@ -16,10 +16,14 @@ parser.add_argument('-p', '--http',
                     action='store',
                     default=7723,
                     help="Port on which to serve vLEI schema SADs.  Defaults to 7723")
-parser.add_argument('-d', '--schema-dir',
+parser.add_argument('-s', '--schema-dir',
                     action='store', dest="schemaDir",
                     required=True,
-                    help="Port on which to serve vLEI schema SADs.  Defaults to 7723")
+                    help="Directory of schema to serve")
+parser.add_argument('-c', '--cred-dir',
+                    action='store', dest="credDir",
+                    required=True,
+                    help="Directory of credentials to serve")
 
 
 def launch(args):
@@ -27,7 +31,7 @@ def launch(args):
     server = http.Server(port=args.http, app=app)
     httpServerDoer = http.ServerDoer(server=server)
 
-    serving.loadEnds(app, args.schemaDir)
+    serving.loadEnds(app, schemaDir=args.schemaDir, credDir=args.credDir)
 
     doers = [httpServerDoer]
 
