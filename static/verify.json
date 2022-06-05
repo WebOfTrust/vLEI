@@ -29,6 +29,60 @@
         "c": "ifrs-full:DescriptionOfNatureOfEntitysOperationsAndPrincipalActivities",
         "e": "e:506700GE1G29325QX363",
         "p": "2020-01-01/2021-01-01"
+      },
+      {
+        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3MjY_af0ab040-71bd-4c7a-8728-061149db2a32",
+        "t": "nonNumeric",
+        "d": "Ek9kevuimmdo4T5r43MYdL68XwSKHH-ibnCy-3mSdbI4",
+        "v": "Global Legal Entity Identifier Foundation",
+        "c": "ifrs-full:NameOfReportingEntityOrOtherMeansOfIdentification",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01"
+      },
+      {
+        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjk_6b265fcf-7f0b-4b79-bd80-f831307b8e80",
+        "t": "nonNumeric",
+        "d": "EqsYGTpkLhRN5iH7fCYywXVHw-cy2l0DFPDsybzSWXd0",
+        "v": "Switzerland",
+        "c": "ifrs-full:PrincipalPlaceOfBusiness",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01"
+      },
+      {
+        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjk_93d940c5-98c5-4f36-ab85-0580154a0514",
+        "t": "nonNumeric",
+        "d": "EzLuyGP6McqgWf4yrzyjyqTQEhVaVGPI0Tu5E3SeH4tY",
+        "v": "Switzerland",
+        "c": "ifrs-full:CountryOfIncorporation",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01"
+      },
+      {
+        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTc1OTIxODYwNTc4NDM_19fac727-6d3e-471e-ac9d-826fd56c20f3",
+        "t": "nonNumeric",
+        "d": "ElFuXFbPtCIjrI0gDQdVgmouSp8A3h0MUpyTEDJrL_Cs",
+        "v": "foundation",
+        "c": "ifrs-full:LegalFormOfEntity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01"
+      },
+      {
+        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjg_89eca65e-6119-4895-93c3-6f7f2d19763a",
+        "t": "nonNumeric",
+        "d": "E4U3b6FvGxcc8xUIjQaZMggl5LyCq7eIbAW0ypsTEXLw",
+        "v": "Basel-Stadt, Switzerland",
+        "c": "ifrs-full:DomicileOfEntity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01"
+      },
+      {
+        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjc_08300a74-e643-4c24-9709-1380ba2dce81",
+        "t": "nonNumeric",
+        "d": "EUb6-vD2fGo9-YiwzvwO51LFay8X-d-3aBrrXG0TQpFg",
+        "v": "St. Alban-Vorstadt 5, 4002 Basel, Switzerland",
+        "c": "ifrs-full:AddressOfRegisteredOfficeOfEntity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01"
       }
     ]
   },
@@ -1646,60 +1700,6 @@
         "e": "e:506700GE1G29325QX363",
         "p": "2021-01-01",
         "f": "ixt:num-dot-decimal"
-      },
-      {
-        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3MjY_af0ab040-71bd-4c7a-8728-061149db2a32",
-        "t": "nonNumeric",
-        "d": "Ek9kevuimmdo4T5r43MYdL68XwSKHH-ibnCy-3mSdbI4",
-        "v": "Global Legal Entity Identifier Foundation",
-        "c": "ifrs-full:NameOfReportingEntityOrOtherMeansOfIdentification",
-        "e": "e:506700GE1G29325QX363",
-        "p": "2020-01-01/2021-01-01"
-      },
-      {
-        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjk_6b265fcf-7f0b-4b79-bd80-f831307b8e80",
-        "t": "nonNumeric",
-        "d": "EqsYGTpkLhRN5iH7fCYywXVHw-cy2l0DFPDsybzSWXd0",
-        "v": "Switzerland",
-        "c": "ifrs-full:PrincipalPlaceOfBusiness",
-        "e": "e:506700GE1G29325QX363",
-        "p": "2020-01-01/2021-01-01"
-      },
-      {
-        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjk_93d940c5-98c5-4f36-ab85-0580154a0514",
-        "t": "nonNumeric",
-        "d": "EzLuyGP6McqgWf4yrzyjyqTQEhVaVGPI0Tu5E3SeH4tY",
-        "v": "Switzerland",
-        "c": "ifrs-full:CountryOfIncorporation",
-        "e": "e:506700GE1G29325QX363",
-        "p": "2020-01-01/2021-01-01"
-      },
-      {
-        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTc1OTIxODYwNTc4NDM_19fac727-6d3e-471e-ac9d-826fd56c20f3",
-        "t": "nonNumeric",
-        "d": "ElFuXFbPtCIjrI0gDQdVgmouSp8A3h0MUpyTEDJrL_Cs",
-        "v": "foundation",
-        "c": "ifrs-full:LegalFormOfEntity",
-        "e": "e:506700GE1G29325QX363",
-        "p": "2020-01-01/2021-01-01"
-      },
-      {
-        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjg_89eca65e-6119-4895-93c3-6f7f2d19763a",
-        "t": "nonNumeric",
-        "d": "E4U3b6FvGxcc8xUIjQaZMggl5LyCq7eIbAW0ypsTEXLw",
-        "v": "Basel-Stadt, Switzerland",
-        "c": "ifrs-full:DomicileOfEntity",
-        "e": "e:506700GE1G29325QX363",
-        "p": "2020-01-01/2021-01-01"
-      },
-      {
-        "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8xOS9mcmFnOmRhODhiMzc4ZDlkMzQyNjZhMDlhZWViM2U3MzBiOTViL3RleHRyZWdpb246ZGE4OGIzNzhkOWQzNDI2NmEwOWFlZWIzZTczMGI5NWJfMTgxNDE5NDE4NzE3Mjc_08300a74-e643-4c24-9709-1380ba2dce81",
-        "t": "nonNumeric",
-        "d": "EUb6-vD2fGo9-YiwzvwO51LFay8X-d-3aBrrXG0TQpFg",
-        "v": "St. Alban-Vorstadt 5, 4002 Basel, Switzerland",
-        "c": "ifrs-full:AddressOfRegisteredOfficeOfEntity",
-        "e": "e:506700GE1G29325QX363",
-        "p": "2020-01-01/2021-01-01"
       },
       {
         "i": "id3VybDovL2RvY3MudjEvZG9jOmYyYTIzMWVhMzZhYTRlMzliODFmMmQ4OWVhNWRiNTQ2L3NlYzpmMmEyMzFlYTM2YWE0ZTM5YjgxZjJkODllYTVkYjU0Nl8yOC9mcmFnOjhjYzdjMTAzMzE3NjQwZTlhMDZiZTk1MTA2MDY4OTM4L3RleHRyZWdpb246OGNjN2MxMDMzMTc2NDBlOWEwNmJlOTUxMDYwNjg5MzhfMTA5OTUxMTY1MTIwMg_2b4d9e29-8381-4332-a77a-a71197cce2b9",
