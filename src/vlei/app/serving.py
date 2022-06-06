@@ -35,13 +35,31 @@ class SchemaEnd:
 
 
 class WellknownEnd:
+    wellknowns = {
+        "gleif-root": "http://127.0.0.1:5642/oobi/E4tEHaAAg8LbvdyUwxchP9WO_lZ2vtXyyFFKmTxVGY9U/witness"
+                      "/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo",
+        "gleif-external": "http://127.0.0.1:5642/oobi/EWN6BzdXo6IByOsuh_fYanK300iEOrQKf6msmbIeC4Y0/witness"
+                          "/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo"
+    }
 
-    def on_get(self, req, rep):
-        raise falcon.HTTPMovedPermanently("http://127.0.0.1:5642/oobi/E4tEHaAAg8LbvdyUwxchP9WO_lZ2vtXyyFFKmTxVGY9U/witness/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo")
+    def on_get(self, req, rep, alias):
+        """
+
+        Parameters:
+          req (Request): HTTP Request Object
+          rep (Response): HTTP Response Object
+          alias (str): Alias of Well-Known OOBI
+
+        """
+
+        if alias not in self.wellknowns:
+            raise falcon.HTTPBadRequest(title="Unknown well known")
+
+        url = self.wellknowns[alias]
+        raise falcon.HTTPMovedPermanently(location=url)
 
 
 def loadEnds(app, schemaDir, credDir):
-
     sink = http.serving.StaticSink(staticDirPath="./static")
     app.add_sink(sink, prefix=sink.DefaultStaticSinkBasePath)
 
@@ -49,4 +67,4 @@ def loadEnds(app, schemaDir, credDir):
     app.add_route("/oobi/{said}", schemaEnd)
 
     wellknownEnd = WellknownEnd()
-    app.add_route("/.well-known/keri/oobi/E4tEHaAAg8LbvdyUwxchP9WO_lZ2vtXyyFFKmTxVGY9U", wellknownEnd)
+    app.add_route("/.well-known/keri/oobi/{alias}", wellknownEnd)
