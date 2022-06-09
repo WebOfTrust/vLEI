@@ -24,6 +24,10 @@ parser.add_argument('-c', '--cred-dir',
                     action='store', dest="credDir",
                     required=True,
                     help="Directory of credentials to serve")
+parser.add_argument('-o', '--oobi-dir',
+                    action='store', dest="oobiDir",
+                    required=True,
+                    help="Directory of OOBIs to serve")
 
 
 def launch(args):
@@ -31,7 +35,7 @@ def launch(args):
     server = http.Server(port=args.http, app=app)
     httpServerDoer = http.ServerDoer(server=server)
 
-    serving.loadEnds(app, schemaDir=args.schemaDir, credDir=args.credDir)
+    serving.loadEnds(app, schemaDir=args.schemaDir, credDir=args.credDir, oobiDir=args.oobiDir)
 
     doers = [httpServerDoer]
 

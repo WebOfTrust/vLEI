@@ -3,7 +3,7 @@
 vLEI.serving module
 
 """
-
+from pathlib import Path
 import falcon
 from hio.core import http
 
@@ -35,12 +35,8 @@ class SchemaEnd:
 
 
 class WellknownEnd:
-    wellknowns = {
-        "gleif-root": "http://127.0.0.1:5642/oobi/E4tEHaAAg8LbvdyUwxchP9WO_lZ2vtXyyFFKmTxVGY9U/witness"
-                      "/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo",
-        "gleif-external": "http://127.0.0.1:5642/oobi/EWN6BzdXo6IByOsuh_fYanK300iEOrQKf6msmbIeC4Y0/witness"
-                          "/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo"
-    }
+    def __init__(self, oobiDir):
+        self.oobiDir = oobiDir
 
     def on_get(self, req, rep, alias):
         """
@@ -52,19 +48,20 @@ class WellknownEnd:
 
         """
 
-        if alias not in self.wellknowns:
+        p = Path(self.oobiDir, alias)
+        if not p.exists():
             raise falcon.HTTPBadRequest(title="Unknown well known")
 
-        url = self.wellknowns[alias]
+        url = p.open().read()
         raise falcon.HTTPMovedPermanently(location=url)
 
 
-def loadEnds(app, schemaDir, credDir):
+def loadEnds(app, schemaDir, credDir, oobiDir):
     sink = http.serving.StaticSink(staticDirPath="./static")
     app.add_sink(sink, prefix=sink.DefaultStaticSinkBasePath)
 
     schemaEnd = SchemaEnd(schemaDir=schemaDir, credDir=credDir)
     app.add_route("/oobi/{said}", schemaEnd)
 
-    wellknownEnd = WellknownEnd()
+    wellknownEnd = WellknownEnd(oobiDir)
     app.add_route("/.well-known/keri/oobi/{alias}", wellknownEnd)
