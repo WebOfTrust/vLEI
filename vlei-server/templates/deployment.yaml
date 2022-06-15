@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "vlei-server.fullname" . }}
+  labels:
+    name: {{ include "vlei-server.fullname" . }}
+  annotations:
+    rollme: {{ randAlphaNum 5 | quote }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: {{ include "vlei-server.fullname" . }}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        name: {{ include "vlei-server.fullname" . }}
+    spec:
+      containers:
+        - name: {{ include "vlei-server.fullname" . }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/sh"]
+          args: ["-c", 'vLEI-server -s ./schema/acdc -c ./samples/acdc -o ./oobis']
+          ports:
+            - name: http
+              containerPort: {{ .Values.httpPort }}
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: logvol
+              mountPath: /dev/log
+              readOnly: false
+            - name: config
+              mountPath: /usr/local/var/vLEI/oobis
+              readOnly: false
+      restartPolicy: Always
+      volumes:
+        - name: logvol
+          hostPath:
+            path: /dev/log
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ include "vlei-server.fullname" . }}
+        - name: config
+          configMap:
+            name: {{ include "vlei-server.fullname" . }}

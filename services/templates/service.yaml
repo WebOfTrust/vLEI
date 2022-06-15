@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.serviceName }}
+  labels:
+    {{- include "services.labels" . | nindent 4 }}
+spec:
+  ports:
+    - name: http
+      port: {{ .Values.httpPort }}
+      protocol: TCP
+      targetPort: {{ .Values.httpPort }}
+  selector:
+    name: {{ .Values.serviceName }}
+  sessionAffinity: None
+  type: LoadBalancer
