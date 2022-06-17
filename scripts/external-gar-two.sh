@@ -10,3 +10,4 @@ echo "ExtGAR2 OOBIs"
 kli oobi generate --name extgar2 --alias extgar2 --role witness
 
 # kli multisig incept --name extgar2 --alias extgar2 --group "External GAR" --file scripts/external-gar-incept.json
+# kli challenge respond --name extgar2 --alias extgar2 --recipient "GLEIF Root" --words ""
