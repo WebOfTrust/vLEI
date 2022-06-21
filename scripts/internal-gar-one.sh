@@ -4,10 +4,11 @@ kli init --name intgar1 --salt 0AMDEyMzQ1Njc4OWxtbm9AbC --nopasscode --config-di
 kli incept --name intgar1 --alias intgar1 --file scripts/single-sig-incept.json
 
 kli oobi resolve --name intgar1 --alias intgar1 --oobi-alias "GLEIF Root" --oobi http://20.121.171.161:7723/.well-known/keri/oobi/gleif-root
-# kli oobi resolve --name intgar1 --alias intgar1 --oobi-alias intgar2 --oobi http://127.0.0.1:5642/oobi/ELS0QzVVwZiGAs_IzDaIjMmscsRfE34apLICJNgC55a8/witness/BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo
+# kli oobi resolve --name intgar1 --alias intgar1 --oobi-alias intgar2 --oobi http://20.124.165.46:5642/oobi/E7OkfLb9BM6DL7N8RCvKmTGrdg_LlUI3jqNcyZqSMdOE/witness/Boq71an-vhU6DtlZzzJF7yIqbQxb56rcxeB0LppxeDOA
 
 echo "intgar1 OOBIs:"
 kli oobi generate --name intgar1 --alias intgar1 --role witness
 echo ""
 
-# kli multisig incept --name intgar1 --alias intgar1 --group "External GAR" --file scripts/demo/internal-gar-incept.json
+# kli challenge respond --name intgar1 --alias intgar1 --recipient "GLEIF Root" --words ""
+# kli multisig incept --name intgar1 --alias intgar1 --group "Internal GAR" --file scripts/internal-gar-incept.json
