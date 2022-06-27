@@ -3393,5 +3393,1648 @@
         "f": "ixt4:num-dot-decimal"
       }
     ]
+  },
+  "ETZG0gFx5uLib9uMQUnP5eQUMrs7XulFeqjCiRtVPdUg": {
+    "i": "EJHoTgN_VltYyIl_WOstP5MDZiwt_KCmqynnwJiivoNs",
+    "ecr": {
+      "d": "EJvzPF53Bhb0P3MUfwtklTjINXdvo1pUiPJmHhaoa-R8",
+      "dt": "2022-06-24T15:22:04.654650+00:00",
+      "i": "EJHoTgN_VltYyIl_WOstP5MDZiwt_KCmqynnwJiivoNs",
+      "LEI": "506700GE1G29325QX363",
+      "personLegalName": "Armin Imoberdorf",
+      "engagementContextRole": "Auditor"
+    },
+    "f": [
+      {
+        "i": "fact-8",
+        "t": "nonFraction",
+        "d": "EP2L5WNMjf-Ld4LYqGhgpHBbBj76otqE02VrAoesqc_0",
+        "v": "13201695",
+        "c": "ifrs-full:LicenceFeeIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-9",
+        "t": "nonFraction",
+        "d": "EHsz-BVeGNbf3V2QVn6tMbLXZrUj4n8YiwH74NRxIqXs",
+        "v": "11987725",
+        "c": "ifrs-full:LicenceFeeIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-10",
+        "t": "nonFraction",
+        "d": "E9yXcVHfjC_PcqesMLZ_u2FZ7roQZEv8UVFlQOPK6BLI",
+        "v": "7059042",
+        "c": "ifrs-full:WagesAndSalaries",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-11",
+        "t": "nonFraction",
+        "d": "E8Lg4P1r5NWPKp8rFJxtTpKH6k5N24ztu3fjCpJNn4Lc",
+        "v": "5894056",
+        "c": "ifrs-full:WagesAndSalaries",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-12",
+        "t": "nonFraction",
+        "d": "ETJR4AWhHBbIufWsxDw5rX6JZcWnQI53alNGrVCIGZHE",
+        "v": "925652",
+        "c": "gleif:SocialContributionsAndExpensesForPensionsAndCare",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-13",
+        "t": "nonFraction",
+        "d": "E8rkhNeHjcB_MN1Y9Pqk52t8kSQ5xNwTwfthV9JffQ4A",
+        "v": "780217",
+        "c": "gleif:SocialContributionsAndExpensesForPensionsAndCare",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-14",
+        "t": "nonFraction",
+        "d": "EUkHnv9zLapddqgzmg1snmS8-dVFj58XWeZKNozuT1Ws",
+        "v": "7984694",
+        "c": "ifrs-full:EmployeeBenefitsExpense",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-15",
+        "t": "nonFraction",
+        "d": "Er1UAYOSFT88fzHmPgedZPyUdtoFQvMAPuLwZCqJ4L4s",
+        "v": "6674273",
+        "c": "ifrs-full:EmployeeBenefitsExpense",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-16",
+        "t": "nonFraction",
+        "d": "EwZoBH4F_1oEGSQN0VTwDiAy240TlEqDiFo57DgLItbI",
+        "v": "4773507",
+        "c": "ifrs-full:OtherExpenseByNature",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-17",
+        "t": "nonFraction",
+        "d": "Eu8mBmVud2JIrA849wmNNtp4J6G6mPpBM3gnotQw1Rcw",
+        "v": "4465448",
+        "c": "ifrs-full:OtherExpenseByNature",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-18",
+        "t": "nonFraction",
+        "d": "EgM2ytvNg6n3flhhX98xaNTgfKFD0d6TODp47aDNbARQ",
+        "v": "162764",
+        "c": "ifrs-full:OtherIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-19",
+        "t": "nonFraction",
+        "d": "EyA6x5vRTcU2mKQeMpohETXN3QM-MXfVcDoD226ib1nE",
+        "v": "345590",
+        "c": "ifrs-full:OtherIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-20",
+        "t": "nonFraction",
+        "d": "Eelc8qjTiwJOCN9dOprKdgcBSUuDug7QqGyOY7qT-La8",
+        "v": "1683704",
+        "c": "ifrs-full:DepreciationAndAmortisationExpense",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-21",
+        "t": "nonFraction",
+        "d": "Eu3d80Mverk5fHzrKjQt73Wle_zzhMg96Tu6JEIQLs1I",
+        "v": "1070035",
+        "c": "ifrs-full:DepreciationAndAmortisationExpense",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-22",
+        "t": "nonFraction",
+        "d": "EkGTRGF3UVsOqzKVqcIsNUxJnq9MucwHJymBNyZ7ABNc",
+        "v": "-1077446",
+        "c": "ifrs-full:ProfitLossFromOperatingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-23",
+        "t": "nonFraction",
+        "d": "EiFTuFCJkjRPIIKH-5_TsY4FUc2ZCIQqJXU7Xtgsg4QY",
+        "v": "123559",
+        "c": "ifrs-full:ProfitLossFromOperatingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-24",
+        "t": "nonFraction",
+        "d": "EDTmmaXOOW7SotjOqo0l013cweqk7XXnmfZdWg_Plozw",
+        "v": "111690",
+        "c": "ifrs-full:RevenueFromGovernmentGrants",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-25",
+        "t": "nonFraction",
+        "d": "EMZH5zg2o-P9POV7DBvfxHZuzTuEh_egBknFRpSKrf2Q",
+        "v": "28811",
+        "c": "ifrs-full:RevenueFromGovernmentGrants",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-26",
+        "t": "nonFraction",
+        "d": "E-ShiSeGBL1J_sVXs7hs3kU8DNun_hv-q9j8_ubiTA-s",
+        "v": "-239631",
+        "c": "ifrs-full:FinanceIncomeCost",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-27",
+        "t": "nonFraction",
+        "d": "EH3dkR2Jd9XFIpFQDn0WmWyYJ2EVrlokljJr-iB4hCAo",
+        "v": "-61766",
+        "c": "ifrs-full:FinanceIncomeCost",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-28",
+        "t": "nonFraction",
+        "d": "ECMaos3oM7MCD_21aJ76wzfkfbjliW1dosqLIdp8V-18",
+        "v": "-1205387",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-29",
+        "t": "nonFraction",
+        "d": "EHnfbiYJhlUFTrSbPHJeVbl9-UERbop0bscROJwNzRkM",
+        "v": "90604",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-30",
+        "t": "nonFraction",
+        "d": "E7Eu8psZPqs_TYbylHjz6zos-Nx65dorLTpWpfs6Pu4s",
+        "v": "13996",
+        "c": "ifrs-full:OtherComprehensiveIncomeNetOfTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-31",
+        "t": "nonFraction",
+        "d": "EL25lRbronZHVgUeechPijX3ZYXvXcp0K-4j7Zna_Ggw",
+        "v": "-6984",
+        "c": "ifrs-full:OtherComprehensiveIncomeNetOfTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-32",
+        "t": "nonFraction",
+        "d": "ER5bdv5YHgZziagsbM2EBK0pGAEJ02b6jhzDRVMMyQr0",
+        "v": "13996",
+        "c": "ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-33",
+        "t": "nonFraction",
+        "d": "EICLBc-FSxj6sgpmHndFTMZqiKu_j82EyE8T2QV76HlE",
+        "v": "-6984",
+        "c": "ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-34",
+        "t": "nonFraction",
+        "d": "EZHqGEXoQZ28hr-70Z1AHwyPwqjYwSmlMHGmA2WwhKJM",
+        "v": "13996",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-35",
+        "t": "nonFraction",
+        "d": "EaETnSAlXCM5dZw5acEGLjX0hy7jJk6SI4cE9H-mDUfA",
+        "v": "-6984",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-36",
+        "t": "nonFraction",
+        "d": "Eo1m0_MzTKOsd3hhDeuXzzJgIXSzhDJ2JlCh_zUopVD0",
+        "v": "-1191391",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-37",
+        "t": "nonFraction",
+        "d": "Ei_e4a2qMMMIzpbw-jaqnaFT7LR7yxwT9eV9gAfE-ZwU",
+        "v": "83620",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-38",
+        "t": "nonFraction",
+        "d": "EawyMbJaMkFo8zRHcqfXr7ojn_Cm5wekOX8MbJoqTx5g",
+        "v": "1846734",
+        "c": "ifrs-full:CurrentTradeReceivables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-39",
+        "t": "nonFraction",
+        "d": "E6qac-732BhjiRuVVTAleskNrR0oXU8aOKyEUIwojys0",
+        "v": "1639591",
+        "c": "ifrs-full:CurrentTradeReceivables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-40",
+        "t": "nonFraction",
+        "d": "EwcBg434ETnSzUg0EI__MH2CVj7lymRAnjcDylzb9xKI",
+        "v": "1840",
+        "c": "ifrs-full:OtherCurrentFinancialAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-41",
+        "t": "nonFraction",
+        "d": "EEfe59TStAmJlg_JEA3yMFH-Pr4OQSwtSFIIEM5u3nx4",
+        "v": "4860",
+        "c": "ifrs-full:OtherCurrentFinancialAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-42",
+        "t": "nonFraction",
+        "d": "EXJUdDWfCxMzgC-jREDLOwmmOxaxR8VZdx8d3RoFGKho",
+        "v": "374827",
+        "c": "ifrs-full:OtherCurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-43",
+        "t": "nonFraction",
+        "d": "E5L-KXPlNvefXh-YeiT48Qc7aZ8y2T4dh2DGQjmXb_tY",
+        "v": "430412",
+        "c": "ifrs-full:OtherCurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-44",
+        "t": "nonFraction",
+        "d": "EbhEQSMyv7dnc1KxPPazwkFGzq9HZuwzQgzvI5FPl5bU",
+        "v": "12193789",
+        "c": "ifrs-full:CashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-45",
+        "t": "nonFraction",
+        "d": "EdVDki7hp_fgsHuDiGT2K2e9DdhRG4XcABrlyTZpdwQQ",
+        "v": "14088580",
+        "c": "ifrs-full:CashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-46",
+        "t": "nonFraction",
+        "d": "ETLfv-B5mY8HvpSGg4dxZxcpAoqpHAw_0qRLuEVwc3YQ",
+        "v": "14417190",
+        "c": "ifrs-full:CurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-47",
+        "t": "nonFraction",
+        "d": "EWwpyF570Js43uSWIahMzBJ6a9ULdGXUUgDCa_43Tehk",
+        "v": "16163443",
+        "c": "ifrs-full:CurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-48",
+        "t": "nonFraction",
+        "d": "E9gJaUZR0Msz7uEMoy1Qf5TboCOHn9I7dB6hHBktJ6Q4",
+        "v": "1468286",
+        "c": "ifrs-full:IntangibleAssetsOtherThanGoodwill",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-49",
+        "t": "nonFraction",
+        "d": "Ei9qXrzpXtCkP-BL8cHjUArfa32158eLzkGfDtYmRrfI",
+        "v": "1220640",
+        "c": "ifrs-full:IntangibleAssetsOtherThanGoodwill",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-50",
+        "t": "nonFraction",
+        "d": "EtTLR3p9YrhZs1qJGaHqJjG-7uw5GjiLpPoiRGmh1JSo",
+        "v": "160067",
+        "c": "ifrs-full:PropertyPlantAndEquipment",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-51",
+        "t": "nonFraction",
+        "d": "E8ZpRBI-KgMP1C65vasAIkszjm6LK6vG6XeUOGszIxG8",
+        "v": "174111",
+        "c": "ifrs-full:PropertyPlantAndEquipment",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-52",
+        "t": "nonFraction",
+        "d": "E5Se9LXdlszNOx_Fmgg7yDTW2xGMFnnslmFhwF0mzODM",
+        "v": "144973",
+        "c": "ifrs-full:NoncurrentFinancialAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-53",
+        "t": "nonFraction",
+        "d": "EoDU4Ya62TRLHFs3oWBCuz10b2S5PIoqb6aerj_Zb_zA",
+        "v": "157069",
+        "c": "ifrs-full:NoncurrentFinancialAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-54",
+        "t": "nonFraction",
+        "d": "Eg-u_9EJBnlxQjM-dvwHkw2mlZ9-RMtI2RuruiilD0lk",
+        "v": "4436334",
+        "c": "ifrs-full:RightofuseAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-55",
+        "t": "nonFraction",
+        "d": "EdHnt9CeUzkQxOfpEzUpgzLb_oBI5u2Mtio-i91UbPjo",
+        "v": "5293914",
+        "c": "ifrs-full:RightofuseAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-56",
+        "t": "nonFraction",
+        "d": "EFkq8K7i07KhwzSES08TG-fzJocJkrCVUC6uZoR3vl58",
+        "v": "6209660",
+        "c": "ifrs-full:NoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-57",
+        "t": "nonFraction",
+        "d": "EAM1da2866vISKEPbuyS9zzf5GFFIQ2IJ4-bHi9Ns-LI",
+        "v": "6845734",
+        "c": "ifrs-full:NoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-58",
+        "t": "nonFraction",
+        "d": "E5vKoa5bV72ML_tLizw50dMK31iBykp-Fn5cMviASubo",
+        "v": "20626850",
+        "c": "ifrs-full:Assets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-59",
+        "t": "nonFraction",
+        "d": "E7sFUExNg_wL4Uq1BtvNbaiNOfG9hLKXNZurRA0qJcCY",
+        "v": "23009177",
+        "c": "ifrs-full:Assets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-60",
+        "t": "nonFraction",
+        "d": "EngCvDsrbbRu4fPxCiZ4gUifaxWMS_gIW3jCywvClGnA",
+        "v": "913290",
+        "c": "ifrs-full:TradeAndOtherCurrentPayablesToTradeSuppliers",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-61",
+        "t": "nonFraction",
+        "d": "EQb12mh5T9drbXgXGewVAPLqErClXXGlsMdJjMa86QwM",
+        "v": "965390",
+        "c": "ifrs-full:TradeAndOtherCurrentPayablesToTradeSuppliers",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-62",
+        "t": "nonFraction",
+        "d": "EcP0kvnj4Gevy_h8jMCqqTIjhsKoEedCPQgRSXhwRnko",
+        "v": "96",
+        "c": "gleif:LiabilitiesDueToBoardDirectors",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-63",
+        "t": "nonFraction",
+        "d": "EyOA6Lnsd0uznTFiq3DetikM-tGOR72CzcTALJXRiwig",
+        "v": "0",
+        "c": "gleif:LiabilitiesDueToBoardDirectors",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-64",
+        "t": "nonFraction",
+        "d": "EosDBwvlsgkG9HDVSVUCiF_3_9tBhhqENNLiaWUrWu-4",
+        "v": "1223308",
+        "c": "ifrs-full:OtherCurrentFinancialLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-65",
+        "t": "nonFraction",
+        "d": "ExBlie17d1Z4TCYKZ8iFtmczOBMNra88vFuQpUtDAhDQ",
+        "v": "1198379",
+        "c": "ifrs-full:OtherCurrentFinancialLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-66",
+        "t": "nonFraction",
+        "d": "Eb9dpDTckwYLeP-6Ldftzd-EkN0fliEXJ-qgcThvIgMU",
+        "v": "1804330",
+        "c": "ifrs-full:OtherCurrentPayables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-67",
+        "t": "nonFraction",
+        "d": "E0roJWQAUA90P3PHM5rQB6vsXby4vPsRZLS6b5RUKE4k",
+        "v": "1633227",
+        "c": "ifrs-full:OtherCurrentPayables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-68",
+        "t": "nonFraction",
+        "d": "EUpyGKZyEBRYUru8LdpwrkrKJr0YiCta4aaM6OObxpGo",
+        "v": "5031",
+        "c": "ifrs-full:CurrentGovernmentGrants",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-69",
+        "t": "nonFraction",
+        "d": "EXrTaJ6FixW9KTpdUS5fyyqxh8sJ-CtYtWYUuL3WKpRY",
+        "v": "96222",
+        "c": "ifrs-full:CurrentGovernmentGrants",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-70",
+        "t": "nonFraction",
+        "d": "EHcHJyEdehL4pbNxB0mECp8Wup0Ckq7ARxYVZAeooosA",
+        "v": "3946055",
+        "c": "ifrs-full:CurrentLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-71",
+        "t": "nonFraction",
+        "d": "EoxJTcvQTaXXfKaJ1vHdYL7ivZGE_W459DWhAZFAT8BM",
+        "v": "3893218",
+        "c": "ifrs-full:CurrentLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-72",
+        "t": "nonFraction",
+        "d": "EcbMoF7ToEq7bdNuGv0TRbhuK0Y-yPe7IhqpR4pVl7tQ",
+        "v": "33611",
+        "c": "ifrs-full:NoncurrentRecognisedLiabilitiesDefinedBenefitPlan",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-73",
+        "t": "nonFraction",
+        "d": "Ea41H0N8Rcxb07zRcW9_KIBJaZ6_gN-OnnHCzJ24qFS0",
+        "v": "46500",
+        "c": "ifrs-full:NoncurrentRecognisedLiabilitiesDefinedBenefitPlan",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-74",
+        "t": "nonFraction",
+        "d": "EzmfhmodBKb5Oz1yWt9exXQ7XBObbizFePphXPA-uHcc",
+        "v": "3567158",
+        "c": "ifrs-full:OtherNoncurrentFinancialLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-75",
+        "t": "nonFraction",
+        "d": "E6MmuZ3Uo0rOAZK6Rw6JNQPl3QLhdj0YxmszNjbImjRI",
+        "v": "4792688",
+        "c": "ifrs-full:OtherNoncurrentFinancialLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-76",
+        "t": "nonFraction",
+        "d": "EunyyLGTunG30a2eRu51YYx1MxRPBFGoQTNaRutRZHag",
+        "v": "1217",
+        "c": "ifrs-full:NoncurrentGovernmentGrants",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-77",
+        "t": "nonFraction",
+        "d": "EQ92P-pS6vyhIOrC-W4d0UXf8nZKJXI6r5R_NzbbRvcc",
+        "v": "6571",
+        "c": "ifrs-full:NoncurrentGovernmentGrants",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-78",
+        "t": "nonFraction",
+        "d": "EIsh2FdpDpOx33y3Fp7Py0MfGFTesBfhkt42_aUFw7qY",
+        "v": "3601986",
+        "c": "ifrs-full:NoncurrentLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-79",
+        "t": "nonFraction",
+        "d": "E2Y8kquQn8Tr57P7l9B3uZbwm2bD6UZoNKFlWrJX6FAg",
+        "v": "4845759",
+        "c": "ifrs-full:NoncurrentLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-80",
+        "t": "nonFraction",
+        "d": "EBUcTrxCIf169qyGY1NXbFzuA6chfS_1Xwl87vKZY1sA",
+        "v": "55927",
+        "c": "ifrs-full:IssuedCapital",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-81",
+        "t": "nonFraction",
+        "d": "EQEcJVgq_KrfKqwceAtQ38YINr_bYKOd275cuP8Uf9FU",
+        "v": "55927",
+        "c": "ifrs-full:IssuedCapital",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-82",
+        "t": "nonFraction",
+        "d": "E-XqSKeyfLM_otrn04qq4zdVPy4yMELEnwEGVMlgg6r0",
+        "v": "28428",
+        "c": "ifrs-full:OtherReserves",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-83",
+        "t": "nonFraction",
+        "d": "EJaZakQagF-kGhJzq_vG4GqN253QH-895EiUV8Ev_eQo",
+        "v": "14432",
+        "c": "ifrs-full:OtherReserves",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-84",
+        "t": "nonFraction",
+        "d": "Eptf0jXywky4vY1gWWhwOTlRgbvkSMgoREohAsvdFvoc",
+        "v": "12994454",
+        "c": "ifrs-full:RetainedEarnings",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-85",
+        "t": "nonFraction",
+        "d": "E9IReAZ72ggD1CAqnuyqUYNJqO3FbP7rawr0YwHxfFYw",
+        "v": "14199841",
+        "c": "ifrs-full:RetainedEarnings",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-86",
+        "t": "nonFraction",
+        "d": "ErxTerX_HEW88475eXnGElDlA-6hXKj4aJRvjbbSzjo0",
+        "v": "13078809",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-87",
+        "t": "nonFraction",
+        "d": "EoU6NFletk19MWah2I8a0ATbXVz3UiD0htVmhq0KvpMg",
+        "v": "14270200",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-88",
+        "t": "nonFraction",
+        "d": "EK9onTCbJ_qDJd7nZhlKrcYvxRy7vM_md-Yew8JINJH8",
+        "v": "20626850",
+        "c": "ifrs-full:EquityAndLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-89",
+        "t": "nonFraction",
+        "d": "EnddojrPK-3KBwmxr3a-qd9yKXS3LcjnDIwo6HQJh2o0",
+        "v": "23009177",
+        "c": "ifrs-full:EquityAndLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-90",
+        "t": "nonFraction",
+        "d": "EColzaEKCawaC9RULKPPxG8D2HhTFiDC7F0nFjtXDgbg",
+        "v": "-1205387",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-91",
+        "t": "nonFraction",
+        "d": "E2d9F-Oy10HNHJ6xQb-D6U7usXclDC6O1tBIWl1F6yvI",
+        "v": "90604",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-92",
+        "t": "nonFraction",
+        "d": "EobldgnYoFgFwlNg7o3taO18_JaKewRwIrEagufkg4tA",
+        "v": "1683704",
+        "c": "ifrs-full:AdjustmentsForDepreciationAndAmortisationExpense",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-93",
+        "t": "nonFraction",
+        "d": "Ea43CuGGE76U8cADdiBm00BUm-JjWCEvvrcRqPtSZtM0",
+        "v": "1070035",
+        "c": "ifrs-full:AdjustmentsForDepreciationAndAmortisationExpense",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-94",
+        "t": "nonFraction",
+        "d": "EGgwmsw2yWPxilxcwcTFWf-aQNRoC_aI58szc8n89FIQ",
+        "v": "5960",
+        "c": "ifrs-full:AdjustmentsForProvisions",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-95",
+        "t": "nonFraction",
+        "d": "Er6TWx-aQ-e8u3ZBpRC6yTNljNpiB7bzQSu5r96DSMVo",
+        "v": "9086",
+        "c": "ifrs-full:AdjustmentsForProvisions",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-96",
+        "t": "nonFraction",
+        "d": "EqXrL2Vt_SiucEyE8iN5OmY-2e_hEc0vfd3LnmX-r60s",
+        "v": "72274",
+        "c": "ifrs-full:AdjustmentsForLossesGainsOnDisposalOfNoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-97",
+        "t": "nonFraction",
+        "d": "E3LDNz5jN2sENuVLk-CsYX4MQotL764eHbP1cl71j38s",
+        "v": "463",
+        "c": "ifrs-full:AdjustmentsForLossesGainsOnDisposalOfNoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-98",
+        "t": "nonFraction",
+        "d": "EJpqigQ3N5PrynKSiQdc7o_YfBZWYs8nd1M-IIgs2MRM",
+        "v": "-112622",
+        "c": "ifrs-full:AdjustmentsForFinanceIncomeCost",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-99",
+        "t": "nonFraction",
+        "d": "EgGSy5sf1wRQimZzOAhkxzrcuGUZ_LIN39o4g1-dMREc",
+        "v": "-24306",
+        "c": "ifrs-full:AdjustmentsForFinanceIncomeCost",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-100",
+        "t": "nonFraction",
+        "d": "EjSSyZtEQxRIzJguXNRHNnws46Qtti9mPm7Bra75EJjg",
+        "v": "127173",
+        "c": "ifrs-full:OtherAdjustmentsForNoncashItems",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-101",
+        "t": "nonFraction",
+        "d": "EnsqIkpLsV_LndIp9PRDzSvZIToTpDvUQ1Sk_OzU-EXQ",
+        "v": "90511",
+        "c": "ifrs-full:OtherAdjustmentsForNoncashItems",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-102",
+        "t": "nonFraction",
+        "d": "EO7L_WBuKEsY_jRkLO3GQCtjo4UAxXHeMKrQbJVtwzWw",
+        "v": "-118037",
+        "c": "ifrs-full:AdjustmentsForDecreaseIncreaseInTradeAndOtherReceivables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-103",
+        "t": "nonFraction",
+        "d": "EbaDwRcDA5ePJN5HPD3r6gRADAJjCnmq_YLWoA1p54G8",
+        "v": "-256953",
+        "c": "ifrs-full:AdjustmentsForDecreaseIncreaseInTradeAndOtherReceivables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-104",
+        "t": "nonFraction",
+        "d": "EVmczVvIKJShrlpGrQo8iuiuEwFZp0BlwqzVL7QqbvWE",
+        "v": "184037",
+        "c": "ifrs-full:AdjustmentsForIncreaseDecreaseInTradeAndOtherPayables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-105",
+        "t": "nonFraction",
+        "d": "E6rjhOFgR0-v3nrjtRtcE_mlYhu91TAliNka3p3pxh08",
+        "v": "391566",
+        "c": "ifrs-full:AdjustmentsForIncreaseDecreaseInTradeAndOtherPayables",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-106",
+        "t": "nonFraction",
+        "d": "EwTUaBijgkFKckPB0_Bt6__sBO0xd8W4H7O4p0bY4iAI",
+        "v": "51737",
+        "c": "ifrs-full:InterestReceivedClassifiedAsOperatingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-107",
+        "t": "nonFraction",
+        "d": "EJkq3UqIP7Cdpu0mBrK4Vtb344A9hsHE0b9MyDFkhAnU",
+        "v": "87061",
+        "c": "ifrs-full:InterestReceivedClassifiedAsOperatingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-108",
+        "t": "nonFraction",
+        "d": "EK615gioyCgF_JgC-hmaPonGaHDRA63sVAVVEMfPVy9U",
+        "v": "914083",
+        "c": "ifrs-full:CashFlowsFromUsedInOperatingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-109",
+        "t": "nonFraction",
+        "d": "EvnrB8lfUNhiXeDalHabTZ_NKzAruAM1Ll7Y-Ss5NACs",
+        "v": "1506679",
+        "c": "ifrs-full:CashFlowsFromUsedInOperatingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-110",
+        "t": "nonFraction",
+        "d": "EJloo3Ape3x1SQgVZHTA886Zh5Nkk7JxGdk3R8Q6iO5I",
+        "v": "4311",
+        "c": "ifrs-full:ProceedsFromDisposalsOfPropertyPlantAndEquipmentIntangibleAssetsOtherThanGoodwillInvestmentPropertyAndOtherNoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-111",
+        "t": "nonFraction",
+        "d": "EVyRr_4GHkm_0fdOOmxTwb8hl9O-dq7seDML1wkqp3ag",
+        "v": "459",
+        "c": "ifrs-full:ProceedsFromDisposalsOfPropertyPlantAndEquipmentIntangibleAssetsOtherThanGoodwillInvestmentPropertyAndOtherNoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-112",
+        "t": "nonFraction",
+        "d": "EjS22ePjBnao1VN7uKkZnEumEC7wQRaHfwQmMHwiFfic",
+        "v": "999407",
+        "c": "ifrs-full:PurchaseOfPropertyPlantAndEquipmentIntangibleAssetsOtherThanGoodwillInvestmentPropertyAndOtherNoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-113",
+        "t": "nonFraction",
+        "d": "EilXOc3uZnDkI_YcYRTUZo7hYBdXXiNeKR9xDw5MGYjI",
+        "v": "539387",
+        "c": "ifrs-full:PurchaseOfPropertyPlantAndEquipmentIntangibleAssetsOtherThanGoodwillInvestmentPropertyAndOtherNoncurrentAssets",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-114",
+        "t": "nonFraction",
+        "d": "Essz5_X_pXzVuJ-Cw8Fe4_3beSHsuQ9QP_plpYRbhWWo",
+        "v": "4361",
+        "c": "ifrs-full:ProceedsFromSalesOrMaturityOfFinancialInstrumentsClassifiedAsInvestingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-115",
+        "t": "nonFraction",
+        "d": "ELjGZNy0xx5rk2Hg4YEmrEs6Qw3KBfH0k8ot0QtV4Ijk",
+        "v": "33509",
+        "c": "ifrs-full:ProceedsFromSalesOrMaturityOfFinancialInstrumentsClassifiedAsInvestingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-116",
+        "t": "nonFraction",
+        "d": "EFH8MZtCd_Weg52gRc9zRHlO5SgKG3Q3lZw3mV6DKO5I",
+        "v": "-990735",
+        "c": "ifrs-full:CashFlowsFromUsedInInvestingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-117",
+        "t": "nonFraction",
+        "d": "ErO04D0e99o9cb6QmMEBjhtifDWgZnc3fr-Jo4gO_IOU",
+        "v": "-505419",
+        "c": "ifrs-full:CashFlowsFromUsedInInvestingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-118",
+        "t": "nonFraction",
+        "d": "EkxWr20jNN-zho80q3y2GXfsDdsZHBh2CWeibjIG3UxE",
+        "v": "981940",
+        "c": "ifrs-full:PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-119",
+        "t": "nonFraction",
+        "d": "EnfMxlI-f1fObsYfmN0XeS-9BkDVmUc_SIzB-t_EEIEg",
+        "v": "362474",
+        "c": "ifrs-full:PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-120",
+        "t": "nonFraction",
+        "d": "EqoTgj9GVJGegJ8b4etBXsuo5RoWI60u2adHIC0t0zq8",
+        "v": "18746",
+        "c": "gleif:PaymentsFromOtherFinancingLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-121",
+        "t": "nonFraction",
+        "d": "EA9OFcuiAt9XufX_ZZ8KRn6c04YxMg_2PXf2RUfGaMQU",
+        "v": "46427",
+        "c": "gleif:PaymentsFromOtherFinancingLiabilities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-122",
+        "t": "nonFraction",
+        "d": "E4Bs8hXnmiB9PRPWj0r9kpkBualxHDJindBPEpBtzruA",
+        "v": "164261",
+        "c": "ifrs-full:InterestPaidClassifiedAsFinancingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-123",
+        "t": "nonFraction",
+        "d": "EOlk6STMtegUUam_gFrpKBSuqqmC22OxstenaJ4d1QKE",
+        "v": "119364",
+        "c": "ifrs-full:InterestPaidClassifiedAsFinancingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-124",
+        "t": "nonFraction",
+        "d": "ETnP0XksbUWo7k0EOOKQjKz3Eq7V9uHtqXc1giXHTX2U",
+        "v": "-1164947",
+        "c": "ifrs-full:CashFlowsFromUsedInFinancingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-125",
+        "t": "nonFraction",
+        "d": "EXtO8ic0g6F24GnnhS8gzOanfZE26JqfjafDLSka-dts",
+        "v": "-528265",
+        "c": "ifrs-full:CashFlowsFromUsedInFinancingActivities",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-126",
+        "t": "nonFraction",
+        "d": "E59jpO66X6pQEkV3T4hdMeRVBrizJzqGPiJx7vL8qOGg",
+        "v": "-1241599",
+        "c": "ifrs-full:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-127",
+        "t": "nonFraction",
+        "d": "Em9pDCdOu17wmYVU5BK1GbuUlL2W9-8j3rDMkkEyMfww",
+        "v": "472995",
+        "c": "ifrs-full:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-128",
+        "t": "nonFraction",
+        "d": "EKOiKwYSndFfei0z5uW5mP3QYOKGqjvC8z4escl6nHcw",
+        "v": "653192",
+        "c": "ifrs-full:EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-129",
+        "t": "nonFraction",
+        "d": "EfHsLfSnBw7iXQ2eWVQq8N4iDqdykooGH_zUS6pQpzVw",
+        "v": "-359661",
+        "c": "ifrs-full:EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-130",
+        "t": "nonFraction",
+        "d": "Eu3Dgs3uExeX6K3vGGeztEiK26A5NG8raCvSjV_9F_2o",
+        "v": "14088580",
+        "c": "ifrs-full:CashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-131",
+        "t": "nonFraction",
+        "d": "EaFAgOY9nozol_YXAcFgB4OmrdorMZSNthECOn4LW1O4",
+        "v": "13255924",
+        "c": "ifrs-full:CashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2019-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-132",
+        "t": "nonFraction",
+        "d": "EhujDFzMWSxXdlTHIHHUzOFvkayBrnZcd_jmWEzet3T4",
+        "v": "12193789",
+        "c": "ifrs-full:CashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-133",
+        "t": "nonFraction",
+        "d": "E5I7YKPnpEFCWyUfUFdZ3ZtBYSf-4XbMx7beR-Pm8-lg",
+        "v": "14088580",
+        "c": "ifrs-full:CashAndCashEquivalents",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-134",
+        "t": "nonFraction",
+        "d": "EiKeG9zLxhk_CaUklYzUk6SuFXnnXIjU5sM9yLGqHTgc",
+        "v": "55927",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-135",
+        "t": "nonFraction",
+        "d": "EgqUagx6SrqldO9oCkFR9EmlwKv60rjY8w1B9OBbU3o0",
+        "v": "21416",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-136",
+        "t": "nonFraction",
+        "d": "Eya4mpwRdyYnTDxdJ9xNVG4zqENfSJHix3DtPooGrOkQ",
+        "v": "14109237",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-137",
+        "t": "nonFraction",
+        "d": "Eoz3unRMEmqHH79i9Y4lLjgg2d9grl0eaH6tOoeCKWaA",
+        "v": "14186580",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-138",
+        "t": "nonFraction",
+        "d": "Ea_SL_up5ykyAqKOaksJO3EV2Vzbcx5bD10JxEBIOyuc",
+        "v": "0",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-139",
+        "t": "nonFraction",
+        "d": "EyVlF4JGoF6gQEUxtH5Ux6Y5AO_e9w0dxDXU60TERQVA",
+        "v": "0",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-140",
+        "t": "nonFraction",
+        "d": "EzULGM6Zzp1aDxVTB1crbjp_SHlb7sFDP6oTLft3CJRQ",
+        "v": "90604",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-141",
+        "t": "nonFraction",
+        "d": "EEtMe9zEUwOchxQjl5z_ebeo0N4FDAYs7US1HHnqXtDk",
+        "v": "90604",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-142",
+        "t": "nonFraction",
+        "d": "EjSUSo_Ghj2jUF0uLnnsNphXH6akVfpHQ6iNRl3uxg1U",
+        "v": "0",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-143",
+        "t": "nonFraction",
+        "d": "EvbmYr6ZhTm36JF3cR-MQUXux9AAOdw_Jiy9evCSg-XQ",
+        "v": "-6984",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-144",
+        "t": "nonFraction",
+        "d": "EBDL0yeuXdVh48Wptx68ihvPxQ-jk3Vvmoz8DSqQFSZY",
+        "v": "0",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-145",
+        "t": "nonFraction",
+        "d": "EFyZu7fe1ooTvxwmRVn-eHc7PH3uQRIhqRa4weA5ufWg",
+        "v": "-6984",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-146",
+        "t": "nonFraction",
+        "d": "EtEfM5u4a604zn1gPTErOQrilkxipga2g5uzU3a8aFvk",
+        "v": "0",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-147",
+        "t": "nonFraction",
+        "d": "E4IcIdeAzTVh9ki4EJLfkTxtiZ7B8zoxlAxkr0yYSPOE",
+        "v": "-6984",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-148",
+        "t": "nonFraction",
+        "d": "EQ6dvo5MRFnbhaBJLsdjtoDgNWnoiIQ44hV_MLHE1r-4",
+        "v": "90604",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-149",
+        "t": "nonFraction",
+        "d": "EILK5n-BZ5bSEdNoinNptDbyOsZ-0LewOYH1z10Q1NJk",
+        "v": "83620",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2020-01-01/2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-150",
+        "t": "nonFraction",
+        "d": "ERyXdmqhICWX9DDvbdFIbmlvFOdhrclQjPwe6WFhR3iM",
+        "v": "55927",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-151",
+        "t": "nonFraction",
+        "d": "Er4-C76yMVdKGjgSmg3grTbPFRriwm-RgAGMVGnBYyJA",
+        "v": "14432",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-152",
+        "t": "nonFraction",
+        "d": "EiHOm3OFWdnmV4xnWBcdLUFe_oHM7n14Y6NNZc1xujy4",
+        "v": "14199841",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-153",
+        "t": "nonFraction",
+        "d": "EOj3P3bQgR3ZR2lwkYk056fmxopKqFC1zsadupr6VOvE",
+        "v": "14270200",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-154",
+        "t": "nonFraction",
+        "d": "EG8Bu2z-ri2dam09N5D0KvV8xv0pKHpq4Hn2_ABzLxPo",
+        "v": "0",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-155",
+        "t": "nonFraction",
+        "d": "EJoq6nikU2DQwC1COitmc5AQjCX2Mg82hTjxnPnAnVIw",
+        "v": "0",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-156",
+        "t": "nonFraction",
+        "d": "ECCx04niCZIhfR4weKKWnURb9jY36HEX0hZGuYklPatA",
+        "v": "-1205387",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-157",
+        "t": "nonFraction",
+        "d": "EZ_aTBPBzfk8hdYaozzUgYwTvJS5OSQB0tV69ekdccFg",
+        "v": "-1205387",
+        "c": "ifrs-full:ProfitLoss",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-158",
+        "t": "nonFraction",
+        "d": "EnOIM7Due42SeC6sNTyuR4qxwofEvIMosIjR0dPWbfjQ",
+        "v": "0",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-159",
+        "t": "nonFraction",
+        "d": "E95SYhCZ7R6N3vFhmTF9ERFWSJ0IWJFyd96hEiW5lGao",
+        "v": "13996",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-160",
+        "t": "nonFraction",
+        "d": "E5No0CoMy-zEP7fE6onGcL5qxO8nCGCW-rQaXzZ-OUyA",
+        "v": "0",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-161",
+        "t": "nonFraction",
+        "d": "EApezlq5UBNtMwekcIhw9juZJ3WjBgiZZBTSJLFw7GPw",
+        "v": "13996",
+        "c": "ifrs-full:OtherComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-162",
+        "t": "nonFraction",
+        "d": "EUiRsf68yH2JhxMjFOwRCRuiTcxwd4o6lk7w8BA1iQd8",
+        "v": "0",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-163",
+        "t": "nonFraction",
+        "d": "EiamQ7K9mCFKGyrJoe2l9w04blkis9ozP3kIy9gLA3Q8",
+        "v": "13996",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-164",
+        "t": "nonFraction",
+        "d": "EuHx_WfniyoEr_LImuh913NnbW8dOBQdfCxDNhYyWikY",
+        "v": "-1205387",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-165",
+        "t": "nonFraction",
+        "d": "E494n9XUZOsDZl0ZbZ0lqVLZG9bYMksmgDAWzVoKRCAw",
+        "v": "-1191391",
+        "c": "ifrs-full:ComprehensiveIncome",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2021-01-01/2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-166",
+        "t": "nonFraction",
+        "d": "EHn_1g7OSZmzSi8UcF50kKt3uCmiU1FtlHvMT5OaYlUE",
+        "v": "55927",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-167",
+        "t": "nonFraction",
+        "d": "ECI5M-iaFz0NP5t80XoiQdOK18f2hWLUug0kXnuW_-90",
+        "v": "28428",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-168",
+        "t": "nonFraction",
+        "d": "ENrMOfDyZ-cLABDJFB5GgnNXqHwO72-lXPxhqOOGJiIw",
+        "v": "12994454",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-169",
+        "t": "nonFraction",
+        "d": "E1XnUcz1E2culJ5WQC-kMi5VRR7W5OAEKRJhKJbMuKnM",
+        "v": "13078809",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      },
+      {
+        "i": "fact-7",
+        "t": "nonFraction",
+        "d": "E9nwYUy6Lp4lkQPI3Z7eDUJAftgiUakYov6Uegn5JrdE",
+        "v": "13078809",
+        "c": "ifrs-full:Equity",
+        "e": "e:506700GE1G29325QX363",
+        "p": "2022-01-01",
+        "f": "ixt4:num-dot-decimal"
+      }
+    ]
   }
 }
