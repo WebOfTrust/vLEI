@@ -27,7 +27,7 @@ def cacheCredential(path, d):
         for file in files:
             if file.endswith('-acdc.cesr'):
                 with open(os.path.join(root, file), 'r') as f:
-                    said = file.rstrip('-acdc.cesr')
+                    said = file.removesuffix('-acdc.cesr')
                     print(f"caching credential {said}")
                     d[said] = f.read()
 
