@@ -32,7 +32,7 @@ parser.add_argument('-o', '--oobi-dir',
 
 def launch(args):
     app = falcon.App()
-    server = http.Server(port=args.http, app=app)
+    server = http.Server(port=int(args.http), app=app)
     httpServerDoer = http.ServerDoer(server=server)
 
     serving.loadEnds(app, schemaDir=args.schemaDir, credDir=args.credDir, oobiDir=args.oobiDir)
