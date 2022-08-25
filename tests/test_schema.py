@@ -9,7 +9,9 @@ from keri.core import scheming
                                       "legal-entity-engagement-context-role-vLEI-credential.json",
                                       "legal-entity-official-organizational-role-vLEI-credential.json",
                                       "legal-entity-vLEI-credential.json",
-                                      "qualified-vLEI-issuer-vLEI-credential.json"])
+                                      "qualified-vLEI-issuer-vLEI-credential.json",
+                                      "oor-authorization-vlei-credential.json",
+                                      "ecr-authorization-vlei-credential.json"])
 @pytest.mark.parametrize("fmt", ["acdc"])
 def test_schema_example(fmt, filename):
     with open(f'{Path(__file__).parent}/../schema/{fmt}/{filename}', 'r') as schema, \
