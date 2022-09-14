@@ -33,8 +33,8 @@ setup(
     name='vlei',
     version='0.0.1',  # also change in src/vlei/__init__.py
     license='Apache Software License 2.0',
-    description='Verifiable Legal Entity Identifer',
-    long_description="Verifiable Legal Entity Identifer Schema Generator and Server",
+    description='Verifiable Legal Entity Identifier',
+    long_description="Verifiable Legal Entity Identifier Schema Generator and Server",
     author='Samuel M. Smith',
     author_email='smith.samuel.m@gmail.com',
     url='https://github.com/WebOfTrust/vLEI',
