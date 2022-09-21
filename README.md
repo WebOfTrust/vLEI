@@ -1,5 +1,11 @@
 # vLEI
 
+| main                                                                                                                                       | dev                                                                                                                                      |
+|--------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| [![main](https://github.com/webOfTrust/vLEI/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/WebOfTrust/vLEI/actions) | [![dev](https://github.com/webOfTrust/vLEI/actions/workflows/test.yml/badge.svg?branch=dev)](https://github.com/WebOfTrust/vLEI/actions) | 
+| [![codecov](https://codecov.io/gh/WebOfTrust/vLEI/branch/main/graph/badge.svg?token=C30E9WBW4D)](https://codecov.io/gh/WebOfTrust/vLEI) | [![codecov](https://codecov.io/gh/WebOfTrust/vLEI/branch/dev/graph/badge.svg?token=C30E9WBW4D)](https://codecov.io/gh/WebOfTrust/vLEI)                                                                                                                                         |
+
+
 ## Public Open Specifications for GLEIF vLEI (verifiable Legal Entity Identifiers)
 
 [GLEIF](https://www.gleif.org/en/)
@@ -33,4 +39,3 @@ To generate new SAIDs for updates schema run:
 ```shell
 python3 src/vlei/generate.py
 ```
-
