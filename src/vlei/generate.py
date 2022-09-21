@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 
 from keri.core import scheming
+from vlei.app import generating
 
 
 def main():
@@ -17,6 +18,8 @@ def main():
 
     for f, d in schemaCache.items():
         with open(f, 'w') as s:
+            d = generating.populateSAIDS(d)
+
             schemer = scheming.Schemer(sed=d)
             if "acdc" in f:
                 f = open(schemer.said, "wb")

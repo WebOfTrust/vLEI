@@ -1,5 +1,5 @@
 {
-  "$id": "EH9jKc3FQ0O2hvp7YPG5sFBgM7wUFVy4OlssP038w6j0",
+  "$id": "EmN6TETTsF6z6v0nOfnQS5-skKzjvs98P9342_uHX8dI",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "iXBRL Data Value Attestation",
   "description": "A data attestation against an iXBRL report, linked to either a vLEI OOR or vLEI ECR credential",
@@ -23,6 +23,7 @@
       "type": "string"
     },
     "a": {
+      "$id": "EOP4-bwI3DzRoDl2NqhuOEz_94V4BkgiSCjX6d-QHszU",
       "description": "data block",
       "properties": {
         "d": {
@@ -101,6 +102,7 @@
     "e": {
       "oneOf": [
         {
+          "$id": "EFc8pqp2GzG8ckMZJDEiiJ5oHeYP1P01FS6-9ODC2DIk",
           "description": "Chained vLEI OOR Credential",
           "properties": {
             "d": {
@@ -135,6 +137,7 @@
           "type": "object"
         },
         {
+          "$id": "Eti5EkR4sPmuavJn3MoI-pLTFx8BsLvcKE7Of2sf1DvQ",
           "description": "Chained vLEI ECR Credential",
           "properties": {
             "d": {
