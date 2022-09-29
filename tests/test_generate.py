@@ -10,8 +10,9 @@ def test_schema_said():
         }
     d = generating.populateSAIDS(d)
 
-    assert d == {'$id': 'ENAu6EMlVRvJVaDs5b41UXBMqhVYaOLEcPxm6y80Ids8',
-                 '$schema': 'http://json-schema.org/draft-07/schema#', 'type': 'object'}
+    assert d == {'$id': 'EDQLuhDJVUbyVWg7OW-NVFwTKoVWGjixHD8ZusvNCHbP',
+                 '$schema': 'http://json-schema.org/draft-07/schema#',
+                 'type': 'object'}
 
 
 def test_sub_schema_said():
@@ -37,13 +38,13 @@ def test_sub_schema_said():
         }
     d = generating.populateSAIDS(d)
 
-    assert d == {'$id': 'EVMnigMh8Dm4v4U9poQyDGXdZ45COiCZPQSKBUhGHCRk',
+    assert d == {'$id': 'EGPA1QjwPXoABEyZltm3NF2mbZ55_uEyx0AqBuGjKWFJ',
                  '$schema': 'http://json-schema.org/draft-07/schema#',
-                 'properties': {'a': {'$id': 'EZ82qaWXwgkt3Mf-xAi3t9T6kZOOZxzSDSmKTmr6lGig',
+                 'properties': {'a': {'$id': 'EGfNqmll8IJLdzH_sQIt7fU-pGTjmcc0g0pik5q-pRoo',
                                       'description': 'a'},
-                                'e': {'$id': 'EYHM8N5S4InI9fOD_5dyAb2DryUtkIEGFs6w2Iona3qY',
+                                'e': {'$id': 'EGBzPDeUuCJyPXzg_-XcgG9g68lLZCBBhbOsNiKJ2t6m',
                                       'description': 'e'},
-                                'r': {'$id': 'EKoVDEOLuGbrvc2K-9T_Ek29PXDmwz_L_scTWMmULEj4',
+                                'r': {'$id': 'ECqFQxDi7hm673NivvU_xJNvT1w5sM_y_7HE1jJlCxI-',
                                       'description': 'r'}},
                  'type': 'object'}
 
@@ -96,18 +97,18 @@ def test_sub_schema_one_of_said():
         }
     d = generating.populateSAIDS(d)
 
-    assert d == {'$id': 'EMP2q02zKzoNRxH-LDXN2F5gtstN4EcGKEDACRiaPGx0',
+    assert d == {'$id': 'EGMcqtFTjdf4Jb-xHuv1mvKqpNvuH_BwrlrvQQbD40dy',
                  '$schema': 'http://json-schema.org/draft-07/schema#',
                  'properties': {'a': {'oneOf': [{'description': 'Attributes block SAID',
                                                  'type': 'string'},
-                                                {'$id': 'EIM_ZMG80iQHFdWJTr_ubiIl1G_7FPnPlHWi0k21-H04',
+                                                {'$id': 'ECDP2TBvNIkBxXViU6_7m4iJdRv-xT5z5R1otJNtfh9O',
                                                  'description': 'Attributes block'}]},
                                 'e': {'oneOf': [{'description': 'Edges block SAID',
                                                  'type': 'string'},
-                                                {'$id': 'EU1hzCwCRqF5uMOSUE81F_1209vCSfHcXFUzHEdG6zaA',
+                                                {'$id': 'EFNYcwsAkahebjDklBPNRf9dtPbwknx3FxVMxxHRus2g',
                                                  'description': 'Edges block'}]},
                                 'r': {'oneOf': [{'description': 'Rules block SAID',
                                                  'type': 'string'},
-                                                {'$id': 'EmByADTSXbkguPBEfrJdhKkBa6iZ5tgxds2Wo0_UcmNo',
+                                                {'$id': 'EJgcgA00l25ILjwRH6yXYSpAWuomebYMXbNlqNP1HJja',
                                                  'description': 'Rules block'}]}},
                  'type': 'object'}
