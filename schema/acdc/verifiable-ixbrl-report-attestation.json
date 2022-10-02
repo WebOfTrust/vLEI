@@ -1,5 +1,5 @@
 {
-  "$id": "EFMLWfza4xWres1TtEttZEvcPg3J3zoqostIDx2BAP0v",
+  "$id": "EJEMDhCDi8gLqtaXrb36DRLHMfC1c08PqirQvdPPSG5u",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "iXBRL Data Value Attestation",
   "description": "A data attestation against an iXBRL report, linked to either a vLEI OOR or vLEI ECR credential",
@@ -118,7 +118,7 @@
                 "s": {
                   "type": "string",
                   "description": "SAID of required schema of the credential pointed to by this node",
-                  "const": "EzWz2j8AzVxFr3g1vy6NTERpy5GNZIOyjhkoniMMGUY4"
+                  "const": "EIL-RWno8cEnkGTi9cr7-PFg_IXTPx9fZ0r9snFFZ0nm"
                 }
               },
               "additionalProperties": false,
@@ -153,7 +153,7 @@
                 "s": {
                   "type": "string",
                   "description": "SAID of required schema of the credential pointed to by this node",
-                  "const": "EwG_7aZDN7OTBVwETjj7ZMs-xsfH4bX111iKdwE104Yg"
+                  "const": "EFCrisUBGjDlnAse1XNVYXNpliqAQEfSOv1_5UC_CJRt"
                 }
               },
               "additionalProperties": false,
