@@ -153,7 +153,7 @@
                 "s": {
                   "type": "string",
                   "description": "SAID of required schema of the credential pointed to by this node",
-                  "const": "EFCrisUBGjDlnAse1XNVYXNpliqAQEfSOv1_5UC_CJRt"
+                  "const": "EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw"
                 }
               },
               "additionalProperties": false,
