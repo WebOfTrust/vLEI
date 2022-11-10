@@ -118,7 +118,7 @@
                 "s": {
                   "type": "string",
                   "description": "SAID of required schema of the credential pointed to by this node",
-                  "const": "EIL-RWno8cEnkGTi9cr7-PFg_IXTPx9fZ0r9snFFZ0nm"
+                  "const": "EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy"
                 }
               },
               "additionalProperties": false,
@@ -153,7 +153,7 @@
                 "s": {
                   "type": "string",
                   "description": "SAID of required schema of the credential pointed to by this node",
-                  "const": "EFCrisUBGjDlnAse1XNVYXNpliqAQEfSOv1_5UC_CJRt"
+                  "const": "EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw"
                 }
               },
               "additionalProperties": false,
