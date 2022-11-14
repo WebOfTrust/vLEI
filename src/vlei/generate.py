@@ -55,6 +55,12 @@ def main():
     ecr = generating.populateSAIDS(ecr)
     __save(p, ecr)
 
+    p = f'{path}/../../schema/acdc/verifiable-ixbrl-report-attestation.json'
+    vira = __load(p)
+    vira['properties']['e']['oneOf'][0]['properties']['oor']["properties"]['s']['const'] = oor[coring.Ids.dollar]
+    vira['properties']['e']['oneOf'][1]['properties']['ecr']["properties"]['s']['const'] = ecr[coring.Ids.dollar]
+    vira = generating.populateSAIDS(vira)
+    __save(p, vira)
 
 def __load(p):
     ff = open(p, 'r')
