@@ -21,13 +21,6 @@ def test_schema_example(fmt, filename):
         schemer.verify(sample.read().encode("utf-8"))
 
 
-def test_legal_entity_chain():
-    qvi = json.load(open(f'{__path()}/../schema/acdc/qualified-vLEI-issuer-vLEI-credential.json', 'r'))
-    le = json.load(open(f'{__path()}/../schema/acdc/legal-entity-vLEI-credential.json', 'r'))
-
-    assert le['properties']['e']['oneOf'][1]['properties']['qvi']["properties"]['s']['const'] == qvi[coring.Ids.dollar]
-
-
 @pytest.mark.parametrize("sample", [
     "legal-entity-engagement-context-role-vLEI-credential-auth.json",
     "legal-entity-engagement-context-role-vLEI-credential-le.json",
@@ -41,6 +34,7 @@ def test_ecr_schema_with_good(fmt, schema, sample):
         schemer = scheming.Schemer(sed=json.load(schma))
 
         assert schemer.verify(smple.read().encode("utf-8"))
+
 
 @pytest.mark.parametrize("sample", [
     "legal-entity-engagement-context-role-vLEI-credential-bad.json",
@@ -56,6 +50,14 @@ def test_ecr_schema_with_bad(fmt, schema, sample):
             schemer.verify(smple.read().encode("utf-8"))
 
         assert e.type is ValidationError
+
+
+def test_legal_entity_chain():
+    qvi = json.load(open(f'{__path()}/../schema/acdc/qualified-vLEI-issuer-vLEI-credential.json', 'r'))
+    le = json.load(open(f'{__path()}/../schema/acdc/legal-entity-vLEI-credential.json', 'r'))
+
+    assert le['properties']['e']['oneOf'][1]['properties']['qvi']["properties"]['s']['const'] == qvi[coring.Ids.dollar]
+    
 
 def test_ecr_auth_chain():
     auth = json.load(open(f'{__path()}/../schema/acdc/ecr-authorization-vlei-credential.json', 'r'))
