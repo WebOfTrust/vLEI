@@ -38,12 +38,15 @@ def test_ecr_schema_with_good(fmt, schema, sample):
 
 @pytest.mark.parametrize("sample", [
     "legal-entity-engagement-context-role-vLEI-credential-bad.json",
+    "legal-entity-engagement-context-role-vLEI-credential-auth-bad.json",
+    "legal-entity-engagement-context-role-vLEI-credential-le-bad.json",
+    "legal-entity-engagement-context-role-vLEI-credential-missing-bad.json",
 ])
 @pytest.mark.parametrize("schema", ["legal-entity-engagement-context-role-vLEI-credential.json", ])
 @pytest.mark.parametrize("fmt", ["acdc"])
 def test_ecr_schema_with_bad(fmt, schema, sample):
     with open(f'{Path(__file__).parent}/../schema/{fmt}/{schema}', 'r') as schma, \
-            open(f'{Path(__file__).parent}/../samples/acdc/{sample}', 'r') as smple:
+            open(f'{Path(__file__).parent}/../test-vectors/{fmt}/ecr-failures/{sample}', 'r') as smple:
         schemer = scheming.Schemer(sed=json.load(schma))
 
         with pytest.raises(ValidationError) as e:
@@ -57,7 +60,7 @@ def test_legal_entity_chain():
     le = json.load(open(f'{__path()}/../schema/acdc/legal-entity-vLEI-credential.json', 'r'))
 
     assert le['properties']['e']['oneOf'][1]['properties']['qvi']["properties"]['s']['const'] == qvi[coring.Ids.dollar]
-    
+
 
 def test_ecr_auth_chain():
     auth = json.load(open(f'{__path()}/../schema/acdc/ecr-authorization-vlei-credential.json', 'r'))
