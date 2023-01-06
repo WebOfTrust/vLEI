@@ -35,7 +35,7 @@ def test_legal_entity_chain():
 ])
 @pytest.mark.parametrize("schema", ["legal-entity-engagement-context-role-vLEI-credential.json", ])
 @pytest.mark.parametrize("fmt", ["acdc"])
-def test_ecr_schema_with_auth(fmt, schema, sample):
+def test_ecr_schema_with_good(fmt, schema, sample):
     with open(f'{Path(__file__).parent}/../schema/{fmt}/{schema}', 'r') as schma, \
             open(f'{Path(__file__).parent}/../samples/acdc/{sample}', 'r') as smple:
         schemer = scheming.Schemer(sed=json.load(schma))
