@@ -94,7 +94,8 @@ setup(
     entry_points={
         'console_scripts': [
             'vLEI-generate = vlei.generate:main',
-            'vLEI-server = vlei.server:main'
+            'vLEI-server = vlei.server:main',
+            'saidify-schema = vlei.saidify:main'
         ]
     },
 )
