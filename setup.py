@@ -81,7 +81,7 @@ setup(
                         'PyYaml>=6.0',
                         'apispec>=5.1.1',
                         'mnemonic>=0.20',
-                        'keri @ git+https://git@github.com/weboftrust/keripy@development',
+                        'keri>=1.0.0',
     ],
     extras_require={
     },

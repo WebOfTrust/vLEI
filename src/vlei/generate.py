@@ -4,6 +4,7 @@ vLEI module
 
 """
 import json
+import os
 from pathlib import Path
 
 from keri.core import scheming, coring
@@ -77,6 +78,13 @@ def __save(p, d):
 
     s = open(p, 'w')
     s.write(json.dumps(schemer.sed, indent=2))
+
+    # for github pages
+    p = 'publish'
+    os.makedirs(os.path.join(p, schemer.said), exist_ok=True)
+    f = open(os.path.join(p, schemer.said, 'index.json'), 'wb')
+    f.write(schemer.raw)
+    f.close()
 
 
 if __name__ == "__main__":
