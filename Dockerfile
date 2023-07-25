@@ -4,6 +4,7 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONIOENCODING=UTF-8
 
 WORKDIR /app
+COPY ./ ./
 RUN pip install -r requirements.txt
 
 EXPOSE 7723
