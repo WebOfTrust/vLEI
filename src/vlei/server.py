@@ -33,6 +33,8 @@ parser.add_argument('-o', '--oobi-dir',
 def launch(args):
     app = falcon.App()
     server = http.Server(port=int(args.http), app=app)
+    if not server.reopen():
+        raise RuntimeError(f"cannot create http server on port {int(args.http)}")
     httpServerDoer = http.ServerDoer(server=server)
 
     serving.loadEnds(app, schemaDir=args.schemaDir, credDir=args.credDir, oobiDir=args.oobiDir)
