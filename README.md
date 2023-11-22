@@ -39,3 +39,9 @@ To generate new SAIDs for updates schema run:
 ```shell
 python3 src/vlei/generate.py
 ```
+
+To Saidify a schema json file and add the schema to ./schema/acdc folder, run:
+
+```shell
+saidify-schema -f <file path of schema file(JSON) to saidify>
+```
