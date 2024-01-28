@@ -1,9 +1,7 @@
-FROM python:3.10.4-buster
+FROM python:3.10-slim
 
 RUN apt-get update
-RUN apt-get install -y ca-certificates
-
-RUN apt-get install -y libsodium23
+RUN apt-get install --no-install-recommends --yes git libsodium23
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONIOENCODING=UTF-8
