@@ -12,8 +12,8 @@ from vlei.app import caching
 
 class SchemaEnd:
 
-    def __init__(self, schemaDir, credDir):
-        self.schemaCache = caching.cacheSchema(schemaDir, dict())
+    def __init__(self, schemaDirs, credDir):
+        self.schemaCache = caching.cacheSchema(schemaDirs, dict())
         self.credentialCache = caching.cacheCredential(credDir, dict())
 
     def on_get(self, _, rep, said):
@@ -56,11 +56,11 @@ class WellknownEnd:
         raise falcon.HTTPMovedPermanently(location=url)
 
 
-def loadEnds(app, schemaDir, credDir, oobiDir):
+def loadEnds(app, schemaDirs, credDir, oobiDir):
     sink = http.serving.StaticSink(staticDirPath="./static")
     app.add_sink(sink, prefix=sink.DefaultStaticSinkBasePath)
 
-    schemaEnd = SchemaEnd(schemaDir=schemaDir, credDir=credDir)
+    schemaEnd = SchemaEnd(schemaDirs=schemaDirs, credDir=credDir)
     app.add_route("/oobi/{said}", schemaEnd)
 
     wellknownEnd = WellknownEnd(oobiDir)
