@@ -22,43 +22,43 @@ def main():
     # legal entity -> qvi edge
     p = f'{path}/../../schema/acdc/legal-entity-vLEI-credential.json'
     le = __load(p)
-    le['properties']['e']['oneOf'][1]['properties']['qvi']["properties"]['s']['const'] = qvi[coring.Ids.dollar]
+    le['properties']['e']['oneOf'][1]['properties']['qvi']["properties"]['s']['const'] = qvi[coring.Saids.dollar]
     le = generating.populateSAIDS(le)
     __save(p, le)
 
     # oor auth -> le edge
     p = f'{path}/../../schema/acdc/oor-authorization-vlei-credential.json'
     oorAuth = __load(p)
-    oorAuth['properties']['e']['oneOf'][1]['properties']['le']["properties"]['s']['const'] = le[coring.Ids.dollar]
+    oorAuth['properties']['e']['oneOf'][1]['properties']['le']["properties"]['s']['const'] = le[coring.Saids.dollar]
     oorAuth = generating.populateSAIDS(oorAuth)
     __save(p, oorAuth)
 
     # oor -> oor auth edge
     p = f'{path}/../../schema/acdc/legal-entity-official-organizational-role-vLEI-credential.json'
     oor = __load(p)
-    oor['properties']['e']['oneOf'][1]['properties']['auth']["properties"]['s']['const'] = oorAuth[coring.Ids.dollar]
+    oor['properties']['e']['oneOf'][1]['properties']['auth']["properties"]['s']['const'] = oorAuth[coring.Saids.dollar]
     oor = generating.populateSAIDS(oor)
     __save(p, oor)
 
     # ecr auth -> le edge
     p = f'{path}/../../schema/acdc/ecr-authorization-vlei-credential.json'
     ecrAuth = __load(p)
-    ecrAuth['properties']['e']['oneOf'][1]['properties']['le']["properties"]['s']['const'] = le[coring.Ids.dollar]
+    ecrAuth['properties']['e']['oneOf'][1]['properties']['le']["properties"]['s']['const'] = le[coring.Saids.dollar]
     ecrAuth = generating.populateSAIDS(ecrAuth)
     __save(p, ecrAuth)
 
     # ecr -> ecr auth edge and le edge
     p = f'{path}/../../schema/acdc/legal-entity-engagement-context-role-vLEI-credential.json'
     ecr = __load(p)
-    ecr['properties']['e']['oneOf'][1]['properties']['auth']["properties"]['s']['const'] = ecrAuth[coring.Ids.dollar]
-    ecr['properties']['e']['oneOf'][2]['properties']['le']["properties"]['s']['const'] = le[coring.Ids.dollar]
+    ecr['properties']['e']['oneOf'][1]['properties']['auth']["properties"]['s']['const'] = ecrAuth[coring.Saids.dollar]
+    ecr['properties']['e']['oneOf'][2]['properties']['le']["properties"]['s']['const'] = le[coring.Saids.dollar]
     ecr = generating.populateSAIDS(ecr)
     __save(p, ecr)
 
     p = f'{path}/../../schema/acdc/verifiable-ixbrl-report-attestation.json'
     vira = __load(p)
-    vira['properties']['e']['oneOf'][0]['properties']['oor']["properties"]['s']['const'] = oor[coring.Ids.dollar]
-    vira['properties']['e']['oneOf'][1]['properties']['ecr']["properties"]['s']['const'] = ecr[coring.Ids.dollar]
+    vira['properties']['e']['oneOf'][0]['properties']['oor']["properties"]['s']['const'] = oor[coring.Saids.dollar]
+    vira['properties']['e']['oneOf'][1]['properties']['ecr']["properties"]['s']['const'] = ecr[coring.Saids.dollar]
     vira = generating.populateSAIDS(vira)
     __save(p, vira)
 
