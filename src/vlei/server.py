@@ -4,10 +4,14 @@ server module
 
 """
 import argparse
+import logging
+import signal
 
 import falcon
 from hio.base import doing
 from hio.core import http, tcp
+
+from keri import help
 
 from vlei.app import serving
 
@@ -34,6 +38,8 @@ parser.add_argument("--certpath", action="store", required=False, default=None,
                     help="TLS server signed certificate (public key) file")
 parser.add_argument("--cafilepath", action="store", required=False, default=None,
                     help="TLS server CA certificate chain")
+
+logger = help.ogler.getLogger()
 
 
 def createHttpServer(port, app, keypath=None, certpath=None, cafilepath=None):
@@ -62,15 +68,16 @@ def createHttpServer(port, app, keypath=None, certpath=None, cafilepath=None):
 
 
 def launch(args):
+    logger.setLevel(logging.INFO)
     app = falcon.App()
     port = int(args.http)
     keypath = args.keypath
     certpath = args.certpath
     cafilepath = args.cafilepath
     if keypath is not None and certpath is not None and cafilepath is not None:
-        print(f"Starting on port {port} with TLS enabled")
+        logger.info(f"vLEI-server starting on port {port} with TLS enabled")
     else:
-        print(f"Starting on port {port} with TLS disabled")
+        logger.info(f"vLEI-server starting on port {port} with TLS disabled")
     server = createHttpServer(port=int(args.http), app=app,
                               keypath=args.keypath, certpath=args.certpath,
                               cafilepath=args.cafilepath)
@@ -82,10 +89,17 @@ def launch(args):
 
     doers = [httpServerDoer]
 
+    # Shutdown hook
+    def shutdownHandler(sig, frame):
+        logger.info("Received signal %s", signal.strsignal(sig))
+        doist.exit()
+    signal.signal(signal.SIGTERM, shutdownHandler)
+
     tock = 0.03125
     doist = doing.Doist(limit=0.0, tock=tock, real=True)
-    doist.do(doers=doers)
+    doist.do(doers=doers) # Enters the doist loop until shutdown
 
+    logger.info("vLEI-server stopped")
 
 def main():
     args = parser.parse_args()
