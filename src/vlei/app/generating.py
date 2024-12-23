@@ -1,7 +1,7 @@
 from keri.core import coring
 
 
-def populateSAIDS(d: dict, idage: str = coring.Ids.dollar, code: str = coring.MtrDex.Blake3_256):
+def populateSAIDS(d: dict, idage: str = coring.Saids.dollar, code: str = coring.MtrDex.Blake3_256):
     if 'properties' in d:
         props = d['properties']
 

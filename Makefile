@@ -4,4 +4,4 @@ push-all:
 
 .PHONY: build-vlei
 build-vlei:
-	@docker buildx build --platform=linux/amd64 --no-cache -f container/Dockerfile --tag gleif/vlei:latest --tag gleif/vlei:0.1.0 .
+	@docker buildx build --load --platform=linux/amd64 -f container/Dockerfile --tag gleif/vlei:latest --tag gleif/vlei:0.2.1 .
