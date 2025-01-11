@@ -45,7 +45,6 @@ class GracefulShutdownDoer(doing.Doer):
     def recur(self, tock=0.0):
         """Generator coroutine checking once per tock for shutdown flag"""
         # Checks once per tock if the shutdown flag has been set and if so initiates the shutdown process
-        logger.info("Recurring graceful shutdown doer")
         while not self.shutdown_received:
             yield tock # will iterate forever in here until shutdown flag set
 
