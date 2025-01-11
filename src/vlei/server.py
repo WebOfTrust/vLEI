@@ -1,19 +1,21 @@
 # -*- encoding: utf-8 -*-
 """
-server module
+vlei.server module
+Contains the Doist and Doers comprising the vLEI server.
 
 """
 import argparse
 import logging
-import signal
+from dataclasses import dataclass
+from typing import List
 
 import falcon
-from hio.base import doing
+from hio.base import doing, Doer
 from hio.core import http, tcp
-
 from keri import help
 
 from vlei.app import serving
+from vlei.app.shutdown import GracefulShutdownDoer
 
 parser = argparse.ArgumentParser(description="Runs vLEI schema server")
 parser.add_argument('-p', '--http',
@@ -39,7 +41,24 @@ parser.add_argument("--certpath", action="store", required=False, default=None,
 parser.add_argument("--cafilepath", action="store", required=False, default=None,
                     help="TLS server CA certificate chain")
 
+
 logger = help.ogler.getLogger()
+
+
+@dataclass
+class VLEIConfig:
+    # HTTP port to listen on
+    http: int = 7723
+    # ACDC schema directory
+    schemaDir: str = None
+    # ACDC material directory
+    credDir: str = None
+    # Well known OOBI directory
+    oobiDir: str = None
+    # TLS key material
+    keypath: str = None
+    certpath: str = None
+    cafilepath: str = None
 
 
 def createHttpServer(port, app, keypath=None, certpath=None, cafilepath=None):
@@ -66,44 +85,57 @@ def createHttpServer(port, app, keypath=None, certpath=None, cafilepath=None):
         server = http.Server(port=port, app=app)
     return server
 
-
-def launch(args):
-    logger.setLevel(logging.INFO)
+def setupVLEIDoers(config: VLEIConfig):
+    """Set up the doers that will be run by the Doist scheduler."""
     app = falcon.App()
-    port = int(args.http)
-    keypath = args.keypath
-    certpath = args.certpath
-    cafilepath = args.cafilepath
+    port = int(config.http)
+    keypath = config.keypath
+    certpath = config.certpath
+    cafilepath = config.cafilepath
     if keypath is not None and certpath is not None and cafilepath is not None:
         logger.info(f"vLEI-server starting on port {port} with TLS enabled")
     else:
         logger.info(f"vLEI-server starting on port {port} with TLS disabled")
-    server = createHttpServer(port=int(args.http), app=app,
-                              keypath=args.keypath, certpath=args.certpath,
-                              cafilepath=args.cafilepath)
+    server = createHttpServer(port=int(config.http), app=app,
+                              keypath=config.keypath, certpath=config.certpath,
+                              cafilepath=config.cafilepath)
     if not server.reopen():
-        raise RuntimeError(f"cannot create http server on port {int(args.http)}")
+        raise RuntimeError(f"cannot create http server on port {int(config.http)}")
     httpServerDoer = http.ServerDoer(server=server)
 
-    serving.loadEnds(app, schemaDir=args.schemaDir, credDir=args.credDir, oobiDir=args.oobiDir)
+    serving.loadEnds(app, schemaDir=config.schemaDir, credDir=config.credDir, oobiDir=config.oobiDir)
 
     doers = [httpServerDoer]
+    return doers
 
-    # Shutdown hook
-    def shutdownHandler(sig, frame):
-        logger.info("Received signal %s", signal.strsignal(sig))
-        doist.exit()
-    signal.signal(signal.SIGTERM, shutdownHandler)
-
+def vLEIDoist(doers: List[Doer]):
+    """Creates a Doist that will run the vLEI server."""
     tock = 0.03125
     doist = doing.Doist(limit=0.0, tock=tock, real=True)
-    doist.do(doers=doers) # Enters the doist loop until shutdown
+    doers.append(GracefulShutdownDoer(doist=doist))
+    doist.doers = doers
+    return doist
 
+
+def launch(config: VLEIConfig):
+    """Launches the vLEI server by calling Doist.do() on the Doers that make up the server."""
+    logger.setLevel(logging.INFO)
+    doist = vLEIDoist(setupVLEIDoers(config))
+    doist.do() # Enters the doist loop until shutdown
     logger.info("vLEI-server stopped")
+
 
 def main():
     args = parser.parse_args()
-    launch(args)
+    launch(VLEIConfig(
+        http=args.http,
+        schemaDir=args.schemaDir,
+        credDir=args.credDir,
+        oobiDir=args.oobiDir,
+        keypath=args.keypath,
+        certpath=args.certpath,
+        cafilepath=args.cafilepath
+    ))
 
 
 if __name__ == "__main__":
