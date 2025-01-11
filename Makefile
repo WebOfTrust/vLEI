@@ -1,7 +1,7 @@
 .PHONY: push-all
 
 VERSION=0.2.2
-IMAGE_NAME=kentbull/vlei
+IMAGE_NAME=gleif/vlei
 
 push-all:
 	@docker push $(IMAGE_NAME) --all-tags

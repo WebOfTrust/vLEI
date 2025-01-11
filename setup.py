@@ -27,14 +27,23 @@ https://caremad.io/posts/2013/07/setup-vs-requirement/
 from glob import glob
 from os.path import basename
 from os.path import splitext
+from pathlib import Path
 
 from setuptools import find_packages, setup
+
+this_directory = Path(__file__).parent
+if (this_directory / "README.md").exists():  # If building inside a container, like in the `container/Dockerfile`, this file won't exist and fails the build
+    long_description = (this_directory / "README.md").read_text()
+else:
+    long_description = "Verifiable Legal Entity Identifier Schema Generator and Server"
+
 setup(
     name='vlei',
-    version='0.2.1',  # also change in src/vlei/__init__.py
+    version='0.2.2',  # also change in src/vlei/__init__.py
     license='Apache Software License 2.0',
     description='Verifiable Legal Entity Identifier',
-    long_description="Verifiable Legal Entity Identifier Schema Generator and Server",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Samuel M. Smith',
     author_email='smith.samuel.m@gmail.com',
     url='https://github.com/WebOfTrust/vLEI',
@@ -65,32 +74,20 @@ setup(
     ],
     python_requires='>=3.12.2',
     install_requires=[
-        'lmdb>=1.4.1',
-        'pysodium>=0.7.17',
-        'blake3>=0.4.1',
-        'msgpack>=1.0.8',
-        'cbor2>=5.6.2',
-        'multidict>=6.0.5',
-        'ordered-set>=4.1.0',
         'hio==0.6.14',
-        'multicommand>=1.0.0',
-        'jsonschema>=4.21.1',
-        'falcon>=3.1.3',
-        'daemonocle>=1.2.3',
-        'hjson>=3.1.0',
-        'PyYaml>=6.0.2',
-        'apispec>=6.8.0',
-        'mnemonic>=0.21',
-        'keri>=1.2.1',
+        'keri>=1.2.2',
+        'falcon>=4.0.2',
+        'multicommand>=1.0.0'
     ],
     extras_require={
     },
     tests_require=[
-        'coverage>=7.4.4',
-        'pytest>=8.1.1',
-'requests==2.32.3'
+        'coverage>=7.6.10',
+        'pytest>=8.3.4',
+        'requests==2.32.3'
     ],
     setup_requires=[
+        'setuptools==75.8.0'
     ],
     entry_points={
         'console_scripts': [

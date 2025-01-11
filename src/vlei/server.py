@@ -50,11 +50,11 @@ class VLEIConfig:
     # HTTP port to listen on
     http: int = 7723
     # ACDC schema directory
-    schemaDir: str = None
+    schemaDir: str = "./schema/acdc/"
     # ACDC material directory
-    credDir: str = None
+    credDir: str = "./samples/acdc/"
     # Well known OOBI directory
-    oobiDir: str = None
+    oobiDir: str = "./samples/oobis/"
     # TLS key material
     keypath: str = None
     certpath: str = None

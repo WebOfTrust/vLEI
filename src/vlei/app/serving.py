@@ -9,6 +9,7 @@ from pathlib import Path
 import falcon
 from hio.core import http
 from keri import help
+from keri.help import nowIso8601
 
 from vlei.app import caching
 
@@ -78,6 +79,12 @@ class WellKnownEnd:
         url = p.open().read()
         raise falcon.HTTPMovedPermanently(location=url)
 
+class HealthEnd:
+    """Health resource for determining that a container is live"""
+
+    def on_get(self, req, resp):
+        resp.status = falcon.HTTP_OK
+        resp.media = {"message": f"Health is okay. Time is {nowIso8601()}"}
 
 def loadEnds(app, schemaDir, credDir, oobiDir):
     sink = http.serving.StaticSink(staticDirPath="./static")
@@ -88,3 +95,6 @@ def loadEnds(app, schemaDir, credDir, oobiDir):
 
     wellknownEnd = WellKnownEnd(oobiDir)
     app.add_route("/.well-known/keri/oobi/{alias}", wellknownEnd)
+
+    healthEnd = HealthEnd()
+    app.add_route("/health", healthEnd)
