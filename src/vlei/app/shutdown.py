@@ -8,8 +8,8 @@ logger = help.ogler.getLogger()
 class GracefulShutdownDoer(doing.Doer):
     """
     Shuts all Agency agents down before exiting the Doist loop, performing a graceful shutdown.
-    Sets up signal handlers in the Doer.enter lifecycle method and exits the Doist scheduler loop in Doer.exit
-    Checks for the signals in the Doer.recur lifecycle method.
+    Sets up signal handler in the Doer.enter lifecycle method and exits the Doist scheduler loop in Doer.exit
+    Checks for the shutdown flag in the Doer.recur lifecycle method.
     """
     def __init__(self, doist, **kwa):
         """
@@ -27,11 +27,6 @@ class GracefulShutdownDoer(doing.Doer):
         logger.info(f"Received SIGTERM, initiating graceful shutdown.")
         self.shutdown_received = True
 
-    def handle_sigint(self, signum, frame):
-        """Handler function for SIGINT"""
-        logger.info(f"Received SIGINT, initiating graceful shutdown.")
-        self.shutdown_received = True
-
     def enter(self):
         """
         Sets up signal handlers.
@@ -39,7 +34,6 @@ class GracefulShutdownDoer(doing.Doer):
         """
         # Register signal handler
         signal.signal(signal.SIGTERM, self.handle_sigterm)
-        signal.signal(signal.SIGINT, self.handle_sigint)
         logger.info("Registered signal handlers for SIGTERM and SIGINT")
 
     def recur(self, tock=0.0):
