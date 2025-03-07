@@ -87,7 +87,7 @@ setup(
         'requests==2.32.3'
     ],
     setup_requires=[
-        'setuptools==75.8.0'
+        'setuptools==75.8.2'
     ],
     entry_points={
         'console_scripts': [
