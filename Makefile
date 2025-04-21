@@ -1,12 +1,11 @@
-.PHONY: push-all
+.PHONY: push-all, build, publish
 
-VERSION=0.2.2
+VERSION=0.2.3
 IMAGE_NAME=gleif/vlei
 
 push-all:
 	@docker push $(IMAGE_NAME) --all-tags
 
-.PHONY: build-vlei
 build:
 	@docker buildx build --load \
 		--platform=linux/amd64,linux/arm64 \
