@@ -8,24 +8,28 @@ logger = help.ogler.getLogger()
 class GracefulShutdownDoer(doing.Doer):
     """
     Shuts all Agency agents down before exiting the Doist loop, performing a graceful shutdown.
-    Sets up signal handler in the Doer.enter lifecycle method and exits the Doist scheduler loop in Doer.exit
+    Sets up signal handler in the Doer.enter lifecycle method and exits the Doist scheduler by raising
+    the KeyboardInterrupt that will be caught by the parent Doist.
     Checks for the shutdown flag in the Doer.recur lifecycle method.
     """
-    def __init__(self, doist, **kwa):
+    def __init__(self, **kwa):
         """
         Parameters:
-            doist (Doist): The Doist running this Doer
             kwa (dict): Additional keyword arguments for Doer initialization
         """
-        self.doist: Doist = doist
         self.shutdown_received = False
 
         super().__init__(**kwa)
 
     def handle_sigterm(self, signum, frame):
         """Handler function for SIGTERM"""
-        logger.info(f"Received SIGTERM, initiating graceful shutdown.")
-        self.shutdown_received = True
+        logger.info(f"Received SIGTERM, throwing interrupt to initiate graceful shutdown.")
+        raise KeyboardInterrupt()
+
+    def handle_sigint(self, signum, frame):
+        """Handler function for SIGINT"""
+        logger.info(f"Received SIGINT, throwing interrupt to initiate graceful shutdown.")
+        raise KeyboardInterrupt()
 
     def enter(self):
         """
@@ -34,6 +38,7 @@ class GracefulShutdownDoer(doing.Doer):
         """
         # Register signal handler
         signal.signal(signal.SIGTERM, self.handle_sigterm)
+        signal.signal(signal.SIGINT, self.handle_sigint)
         logger.info("Registered signal handlers for SIGTERM and SIGINT")
 
     def recur(self, tock=0.0):
@@ -51,5 +56,4 @@ class GracefulShutdownDoer(doing.Doer):
         Exits the Doist loop.
         Lifecycle method called once when the Doist running this Doer exits the context for this Doer.
         """
-        logger.info(f"Shutting down main Doist loop")
-        self.doist.exit()
+        logger.info(f"Graceful shutdown finished")

@@ -39,7 +39,7 @@ else:
 
 setup(
     name='vlei',
-    version='0.2.3',  # also change in src/vlei/__init__.py
+    version='1.0.0',  # also change in src/vlei/__init__.py
     license='Apache Software License 2.0',
     description='Verifiable Legal Entity Identifier',
     long_description=long_description,
@@ -87,7 +87,7 @@ setup(
         'requests==2.32.3'
     ],
     setup_requires=[
-        'setuptools==79.0.0'
+        'setuptools==80.8.0'
     ],
     entry_points={
         'console_scripts': [
