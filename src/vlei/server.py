@@ -14,6 +14,7 @@ from hio.base import doing, Doer
 from hio.core import http, tcp
 from keri import help
 
+import vlei
 from vlei.app import serving
 from vlei.app.shutdown import GracefulShutdownDoer
 
@@ -40,6 +41,8 @@ parser.add_argument("--certpath", action="store", required=False, default=None,
                     help="TLS server signed certificate (public key) file")
 parser.add_argument("--cafilepath", action="store", required=False, default=None,
                     help="TLS server CA certificate chain")
+parser.add_argument("--loglevel", action="store", required=False, default="INFO",
+                    help="Set log level to DEBUG | INFO | WARNING | ERROR | CRITICAL. Default is INFO")
 
 
 logger = help.ogler.getLogger()
@@ -55,6 +58,7 @@ class VLEIConfig:
     credDir: str = "./samples/acdc/"
     # Well known OOBI directory
     oobiDir: str = "./samples/oobis/"
+    logLevel: str = "CRITICAL"
     # TLS key material
     keypath: str = None
     certpath: str = None
@@ -93,9 +97,9 @@ def setupVLEIDoers(config: VLEIConfig):
     certpath = config.certpath
     cafilepath = config.cafilepath
     if keypath is not None and certpath is not None and cafilepath is not None:
-        logger.info(f"vLEI-server starting on port {port} with TLS enabled")
+        logger.info(f"vLEI-server v{vlei.__version__} starting on port {port} with TLS enabled")
     else:
-        logger.info(f"vLEI-server starting on port {port} with TLS disabled")
+        logger.info(f"vLEI-server v{vlei.__version__} starting on port {port} with TLS disabled")
     server = createHttpServer(port=int(config.http), app=app,
                               keypath=config.keypath, certpath=config.certpath,
                               cafilepath=config.cafilepath)
@@ -112,14 +116,20 @@ def vLEIDoist(doers: List[Doer]):
     """Creates a Doist that will run the vLEI server."""
     tock = 0.03125
     doist = doing.Doist(limit=0.0, tock=tock, real=True)
-    doers.append(GracefulShutdownDoer(doist=doist))
+    doers.append(GracefulShutdownDoer())
     doist.doers = doers
     return doist
 
 
 def launch(config: VLEIConfig):
     """Launches the vLEI server by calling Doist.do() on the Doers that make up the server."""
-    logger.setLevel(logging.INFO)
+    # log level
+    base_formatter = logging.Formatter('%(asctime)s [vLEI-server] %(module)s.%(funcName)s-%(lineno)s %(levelname)-8s %(message)s')
+    base_formatter.default_msec_format = None
+    help.ogler.baseConsoleHandler.setFormatter(base_formatter)
+    help.ogler.level = logging.getLevelName(config.logLevel)
+    logger.setLevel(help.ogler.level)
+
     doist = vLEIDoist(setupVLEIDoers(config))
     doist.do() # Enters the doist loop until shutdown
     logger.info("vLEI-server stopped")
@@ -132,6 +142,7 @@ def main():
         schemaDir=args.schemaDir,
         credDir=args.credDir,
         oobiDir=args.oobiDir,
+        logLevel=args.loglevel.upper(),
         keypath=args.keypath,
         certpath=args.certpath,
         cafilepath=args.cafilepath
