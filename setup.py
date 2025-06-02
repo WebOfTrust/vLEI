@@ -39,7 +39,7 @@ else:
 
 setup(
     name='vlei',
-    version='0.2.2',  # also change in src/vlei/__init__.py
+    version='1.0.0',  # also change in src/vlei/__init__.py
     license='Apache Software License 2.0',
     description='Verifiable Legal Entity Identifier',
     long_description=long_description,
@@ -72,22 +72,21 @@ setup(
     keywords=[
         'keri','acdc','vlei'
     ],
-    python_requires='>=3.12.2',
+    python_requires='>=3.12.6',
     install_requires=[
         'hio==0.6.14',
-        'keri>=1.2.2',
+        'keri>=1.2.6',
         'falcon>=4.0.2',
         'multicommand>=1.0.0'
     ],
     extras_require={
     },
     tests_require=[
-        'coverage>=7.6.10',
-        'pytest>=8.3.4',
+        'coverage>=7.8.0',
+        'pytest>=8.3.5',
         'requests==2.32.3'
     ],
     setup_requires=[
-        'setuptools==75.8.2'
     ],
     entry_points={
         'console_scripts': [
