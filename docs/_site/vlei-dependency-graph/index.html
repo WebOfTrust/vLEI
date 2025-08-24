@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>vLEI Dependency Graph | VLEI Credential Ecosystem Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="vLEI Dependency Graph" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
+<meta property="og:description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
+<link rel="canonical" href="http://localhost:4001/vlei-dependency-graph/" />
+<meta property="og:url" content="http://localhost:4001/vlei-dependency-graph/" />
+<meta property="og:site_name" content="VLEI Credential Ecosystem Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="vLEI Dependency Graph" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"vLEI Dependency Graph","url":"http://localhost:4001/vlei-dependency-graph/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="VLEI Credential Ecosystem Documentation" /><!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ 
+        startOnLoad: false,
+        theme: 'default'
+      });
+      
+      window.addEventListener("load", function() {
+        // Find all code blocks with mermaid language
+        document.querySelectorAll('pre code.language-mermaid').forEach(function(element) {
+          // Get the text content
+          var graphDefinition = element.textContent;
+          
+          // Create a div to hold the rendered graph
+          var graphDiv = document.createElement('div');
+          graphDiv.className = 'mermaid';
+          graphDiv.textContent = graphDefinition;
+          
+          // Replace the pre element with the new div
+          element.closest('pre').replaceWith(graphDiv);
+        });
+        
+        // Initialize mermaid to render the new divs
+        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+      });
+    </script>
+  </head>
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">VLEI Credential Ecosystem Documentation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/credentials/">Credentials</a><a class="page-link" href="/vlei-credential-ecosystem/">vLEI Credential Ecosystem</a><a class="page-link" href="/vlei-dependency-graph/">vLEI Dependency Graph</a></div>
+      </nav></div>
+</header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">vLEI Dependency Graph</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="vlei-credential-dependencies-and-relationships">vLEI Credential Dependencies and Relationships</h1>
+
+<h2 id="dependency-graph">Dependency Graph</h2>
+
+<pre><code class="language-mermaid">graph TD
+    %% Define nodes with schema IDs
+    GLEIF["GLEIF&lt;br/&gt;Root Authority"]
+    QVI["QVI vLEI Credential&lt;br/&gt;Schema: EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao&lt;br/&gt;Issued by: GLEIF"]
+    LE["Legal Entity vLEI Credential&lt;br/&gt;Schema: ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY&lt;br/&gt;Issued by: QVI"]
+    OORAuth["OOR Authorization Credential&lt;br/&gt;Schema: EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E&lt;br/&gt;Issued by: Legal Entity"]
+    ECRAuth["ECR Authorization Credential&lt;br/&gt;Schema: EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g&lt;br/&gt;Issued by: Legal Entity"]
+    OOR["OOR vLEI Credential&lt;br/&gt;Schema: EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy&lt;br/&gt;Issued by: QVI"]
+    ECR["ECR vLEI Credential&lt;br/&gt;Schema: [ECR Schema]&lt;br/&gt;Issued by: QVI"]
+    Person["Person/Role Holder"]
+
+    %% Define dependencies
+    GLEIF --&gt;|issues| QVI
+    QVI --&gt;|issues| LE
+    LE --&gt;|authorizes via| OORAuth
+    LE --&gt;|authorizes via| ECRAuth
+    OORAuth --&gt;|enables issuance of| OOR
+    ECRAuth --&gt;|enables issuance of| ECR
+    QVI --&gt;|issues with auth| OOR
+    QVI --&gt;|issues with auth| ECR
+    OOR --&gt;|held by| Person
+    ECR --&gt;|held by| Person
+
+    %% Edge dependencies (credential chaining)
+    LE -.-&gt;|edges.qvi references| QVI
+    OORAuth -.-&gt;|edges.le references| LE
+    ECRAuth -.-&gt;|edges.le references| LE
+    OOR -.-&gt;|edges.auth references| OORAuth
+
+    %% Styling
+    style GLEIF fill:#e1f5fe
+    style QVI fill:#fff3e0
+    style LE fill:#e8f5e9
+    style OORAuth fill:#fce4ec
+    style ECRAuth fill:#fce4ec
+    style OOR fill:#f3e5f5
+    style ECR fill:#f3e5f5
+    style Person fill:#e0e0e0
+</code></pre>
+
+<h2 id="credential-dependencies-table">Credential Dependencies Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Credential Type</th>
+      <th>Schema SAID</th>
+      <th>Issuer</th>
+      <th>Required Dependencies</th>
+      <th>Edge References</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>QVI vLEI</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao</code></td>
+      <td>GLEIF</td>
+      <td>None (Root)</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Legal Entity vLEI</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY</code></td>
+      <td>QVI</td>
+      <td>QVI Credential</td>
+      <td>edges.qvi → QVI Schema</td>
+    </tr>
+    <tr>
+      <td><strong>OOR Authorization</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E</code></td>
+      <td>Legal Entity</td>
+      <td>LE Credential</td>
+      <td>edges.le → LE Schema</td>
+    </tr>
+    <tr>
+      <td><strong>ECR Authorization</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g</code></td>
+      <td>Legal Entity</td>
+      <td>LE Credential</td>
+      <td>edges.le → LE Schema</td>
+    </tr>
+    <tr>
+      <td><strong>OOR vLEI</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy</code></td>
+      <td>QVI</td>
+      <td>OOR Authorization</td>
+      <td>edges.auth → OOR Auth Schema</td>
+    </tr>
+    <tr>
+      <td><strong>ECR vLEI</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw</code></td>
+      <td>QVI</td>
+      <td>ECR Authorization</td>
+      <td>edges.auth → ECR Auth Schema</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dependency-rules">Dependency Rules</h2>
+
+<h3 id="1-hierarchical-dependencies">1. <strong>Hierarchical Dependencies</strong></h3>
+<ul>
+  <li>GLEIF is the root authority (no dependencies)</li>
+  <li>QVIs must have valid GLEIF-issued credentials</li>
+  <li>Legal Entities must have valid QVI-issued credentials</li>
+  <li>Role credentials require authorization from Legal Entities</li>
+</ul>
+
+<h3 id="2-edge-based-verification">2. <strong>Edge-Based Verification</strong></h3>
+<p>Each credential (except QVI) contains an <code class="language-plaintext highlighter-rouge">edges</code> block that references parent credentials:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"parentType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"n"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parent credential SAID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"s"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parent schema SAID (constant)"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="3-authorization-flow">3. <strong>Authorization Flow</strong></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant LE as Legal Entity
+    participant QVI as QVI
+    participant P as Person
+    
+    Note over LE,QVI: Authorization Phase
+    LE-&gt;&gt;QVI: Issue OOR/ECR Authorization
+    Note right of QVI: Contains: AID, LEI, personLegalName, role
+    
+    Note over QVI,P: Issuance Phase
+    QVI-&gt;&gt;P: Issue OOR/ECR Credential
+    Note right of P: Must reference authorization in edges
+</code></pre>
+
+<h3 id="4-validation-chain">4. <strong>Validation Chain</strong></h3>
+<p>To validate any credential, verifiers must:</p>
+<ol>
+  <li>Check the credential signature and status</li>
+  <li>Follow edge references up the chain</li>
+  <li>Validate each parent credential</li>
+  <li>Ensure unbroken chain to GLEIF root</li>
+</ol>
+
+<h2 id="critical-dependencies">Critical Dependencies</h2>
+
+<h3 id="for-qvi-operations">For QVI Operations</h3>
+<ul>
+  <li><strong>Required</strong>: Valid QVI vLEI Credential from GLEIF</li>
+  <li><strong>Enables</strong>: Issuing LE credentials, OOR/ECR credentials (with auth)</li>
+</ul>
+
+<h3 id="for-legal-entity-operations">For Legal Entity Operations</h3>
+<ul>
+  <li><strong>Required</strong>: Valid LE vLEI Credential from QVI</li>
+  <li><strong>Enables</strong>: Issuing OOR/ECR Authorization credentials</li>
+</ul>
+
+<h3 id="for-role-issuance">For Role Issuance</h3>
+<ul>
+  <li><strong>Required</strong>: Valid Authorization credential from LE + Valid QVI credential</li>
+  <li><strong>Enables</strong>: Issuing role credentials to persons</li>
+</ul>
+
+  </div>
+
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">VLEI Credential Ecosystem Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">VLEI Credential Ecosystem Documentation</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

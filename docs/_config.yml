@@ -1,0 +1,20 @@
+title: vLEI Credential Ecosystem Documentation
+description: Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation
+theme: minima
+baseurl: ""
+url: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+
+header_pages:
+  - index.md
+  - credentials.md
+  - vlei-credential-ecosystem.md
+  - vlei-dependency-graph.md

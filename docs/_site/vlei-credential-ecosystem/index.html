@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>vLEI Credential Ecosystem | VLEI Credential Ecosystem Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="vLEI Credential Ecosystem" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
+<meta property="og:description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
+<link rel="canonical" href="http://localhost:4001/vlei-credential-ecosystem/" />
+<meta property="og:url" content="http://localhost:4001/vlei-credential-ecosystem/" />
+<meta property="og:site_name" content="VLEI Credential Ecosystem Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="vLEI Credential Ecosystem" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"vLEI Credential Ecosystem","url":"http://localhost:4001/vlei-credential-ecosystem/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="VLEI Credential Ecosystem Documentation" /><!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ 
+        startOnLoad: false,
+        theme: 'default'
+      });
+      
+      window.addEventListener("load", function() {
+        // Find all code blocks with mermaid language
+        document.querySelectorAll('pre code.language-mermaid').forEach(function(element) {
+          // Get the text content
+          var graphDefinition = element.textContent;
+          
+          // Create a div to hold the rendered graph
+          var graphDiv = document.createElement('div');
+          graphDiv.className = 'mermaid';
+          graphDiv.textContent = graphDefinition;
+          
+          // Replace the pre element with the new div
+          element.closest('pre').replaceWith(graphDiv);
+        });
+        
+        // Initialize mermaid to render the new divs
+        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+      });
+    </script>
+  </head>
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">VLEI Credential Ecosystem Documentation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/credentials/">Credentials</a><a class="page-link" href="/vlei-credential-ecosystem/">vLEI Credential Ecosystem</a><a class="page-link" href="/vlei-dependency-graph/">vLEI Dependency Graph</a></div>
+      </nav></div>
+</header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">vLEI Credential Ecosystem</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="vlei-credential-ecosystem---dependencies-and-schema-relationships">vLEI Credential Ecosystem - Dependencies and Schema Relationships</h1>
+
+<pre><code class="language-mermaid">classDiagram
+    %% Core Credential Classes
+    class QVICredential {
+        +string v : Version
+        +string d : Credential SAID
+        +string u : One time use nonce
+        +string i : GLEIF Issuee AID
+        +string ri : Credential status registry
+        +string s : Schema SAID
+        +Attributes a : Attributes block
+        +Rules r : Rules block
+    }
+
+    class LECredential {
+        +string v : Version
+        +string d : Credential SAID
+        +string u : One time use nonce
+        +string i : QVI Issuer AID
+        +string ri : Credential status registry
+        +string s : Schema SAID
+        +Attributes a : Attributes block
+        +Edges e : Edges block
+        +Rules r : Rules block
+    }
+
+    class OORCredential {
+        +string v : Version
+        +string d : Credential SAID
+        +string u : One time use nonce
+        +string i : QVI Issuer AID
+        +string ri : Credential status registry
+        +string s : Schema SAID
+        +Attributes a : Attributes block
+        +Edges e : Edges block
+        +Rules r : Rules block
+    }
+
+    class OORAuthCredential {
+        +string v : Version
+        +string d : Credential SAID
+        +string u : One time use nonce
+        +string i : LE Issuer AID
+        +string ri : Credential status registry
+        +string s : Schema SAID
+        +Attributes a : Attributes block
+        +Edges e : Edges block
+        +Rules r : Rules block
+    }
+
+    class ECRAuthCredential {
+        +string v : Version
+        +string d : Credential SAID
+        +string u : One time use nonce
+        +string i : LE Issuer AID
+        +string ri : Credential status registry
+        +string s : Schema SAID
+        +Attributes a : Attributes block
+        +Edges e : Edges block
+        +Rules r : Rules block
+    }
+
+    %% Attribute Classes
+    class QVIAttributes {
+        +string i : QVI Issuee AID
+        +string dt : Issuance date time
+        +string LEI : LEI of the requesting Legal Entity
+        +int gracePeriod : Allocated grace period
+    }
+
+    class LEAttributes {
+        +string i : LE Issuer AID
+        +string dt : issuance date time
+        +string LEI : LE Issuer AID
+    }
+
+    class OORAttributes {
+        +string i : Person Issuee AID
+        +string dt : Issuance date time
+        +string LEI : LEI of the Legal Entity
+        +string personLegalName : Recipient name as provided during identity assurance
+        +string officialRole : Official role title
+    }
+
+    class AuthAttributes {
+        +string i : QVI Issuee AID
+        +string dt : Issuance date time
+        +string AID : AID of the intended recipient of the ECR credential
+        +string LEI : LEI of the requesting Legal Entity
+        +string personLegalName : Requested recipient name as provided during identity assurance
+        +string role : Requested role description
+    }
+
+    %% Edge Classes
+    class QVIEdge {
+        +string n : Issuer credential SAID
+        +string s : SAID of required schema of the credential pointed to by this node
+    }
+
+    class LEEdge {
+        +string n : Issuer credential SAID
+        +string s : SAID of required schema of the credential pointed to by this node
+    }
+
+    class AuthEdge {
+        +string n : Issuer credential SAID
+        +string s : SAID of required schema of the credential pointed to by this node
+        +string o : Operator for this edge
+    }
+
+    %% Rules Classes
+    class Rules {
+        +UsageDisclaimer usageDisclaimer : Usage Disclaimer
+        +IssuanceDisclaimer issuanceDisclaimer : Issuance Disclaimer
+        +PrivacyDisclaimer privacyDisclaimer : Privacy Disclaimer
+    }
+
+    %% Relationships
+    QVICredential --&gt; QVIAttributes : contains
+    QVICredential --&gt; Rules : has
+    
+    LECredential --&gt; LEAttributes : contains
+    LECredential --&gt; QVIEdge : chains to
+    LECredential --&gt; Rules : has
+    
+    OORCredential --&gt; OORAttributes : contains
+    OORCredential --&gt; AuthEdge : authorized by
+    OORCredential --&gt; Rules : has
+    
+    OORAuthCredential --&gt; AuthAttributes : contains
+    OORAuthCredential --&gt; LEEdge : chains to
+    OORAuthCredential --&gt; Rules : has
+    
+    ECRAuthCredential --&gt; AuthAttributes : contains
+    ECRAuthCredential --&gt; LEEdge : chains to
+    ECRAuthCredential --&gt; Rules : has
+
+    %% Credential Chain Relationships
+    LECredential ..&gt; QVICredential : requires - QVI must exist
+    OORCredential ..&gt; OORAuthCredential : requires - needs authorization
+    OORAuthCredential ..&gt; LECredential : requires - LE must exist
+    ECRAuthCredential ..&gt; LECredential : requires - LE must exist
+
+    %% Schema SAIDs
+    note for QVICredential "QVI vLEI Credential&lt;br/&gt;Schema: EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao&lt;br/&gt;Issued by: GLEIF → QVI"
+    
+    note for LECredential "Legal Entity vLEI Credential&lt;br/&gt;Schema: ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY&lt;br/&gt;Issued by: QVI → LE"
+    
+    note for OORCredential "Official Organizational Role&lt;br/&gt;Schema: EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy&lt;br/&gt;Issued by: QVI → Person"
+    
+    note for OORAuthCredential "OOR Authorization&lt;br/&gt;Schema: EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E&lt;br/&gt;Issued by: LE → QVI"
+    
+    note for ECRAuthCredential "ECR Authorization&lt;br/&gt;Schema: EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g&lt;br/&gt;Issued by: LE → QVI"
+</code></pre>
+
+<h2 id="credential-issuance-flow">Credential Issuance Flow</h2>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant GLEIF
+    participant QVI as Qualified vLEI Issuer
+    participant LE as Legal Entity
+    participant Person as Person/Role Holder
+    
+    rect rgb(240, 240, 255)
+        Note over GLEIF,QVI: Foundation Layer
+        GLEIF-&gt;&gt;QVI: Issue QVI vLEI Credential
+        Note right of QVI: Schema: EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao
+    end
+    
+    rect rgb(240, 255, 240)
+        Note over QVI,LE: Legal Entity Layer
+        QVI-&gt;&gt;LE: Issue LE vLEI Credential
+        Note right of LE: Schema: ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY
+        Note right of LE: Chains to QVI credential
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over LE,Person: Authorization Layer
+        LE-&gt;&gt;QVI: Issue OOR Authorization
+        Note left of QVI: Schema: EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E
+        Note left of QVI: Authorizes role issuance
+        
+        LE-&gt;&gt;QVI: Issue ECR Authorization
+        Note left of QVI: Schema: EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g
+        Note left of QVI: Authorizes context role
+    end
+    
+    rect rgb(255, 255, 240)
+        Note over QVI,Person: Role Credential Layer
+        QVI-&gt;&gt;Person: Issue OOR vLEI Credential
+        Note right of Person: Schema: EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy
+        Note right of Person: Chains to OOR Auth
+        QVI-&gt;&gt;Person: Issue ECR vLEI Credential
+        Note right of Person: Schema: EEEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw
+        Note right of Person: Chains to ECR Auth
+        LE-&gt;&gt;Person: Issue ECR vLEI Credential
+        Note right of Person: Schema: EEEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw
+    end
+</code></pre>
+
+<h2 id="key-design-patterns">Key Design Patterns</h2>
+
+<h3 id="1-credential-chaining">1. Credential Chaining</h3>
+
+<ul>
+  <li>Each credential (except QVI) references its parent through edges</li>
+  <li>Ensures verifiable chain of authority from GLEIF down to individual roles</li>
+</ul>
+
+<h3 id="2-compact-credentials">2. Compact credentials</h3>
+
+<ul>
+  <li>Attributes and Rules can be either:
+    <ul>
+      <li>Full objects with all properties</li>
+      <li>SAIDs for compactness</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-common-rules-structure">3. Common Rules Structure</h3>
+
+<ul>
+  <li>All credentials share similar disclaimer structure</li>
+  <li>ECR Authorization adds privacy disclaimer for IPEX/ACDC</li>
+</ul>
+
+<h3 id="4-authorization-pattern">4. Authorization Pattern</h3>
+
+<ul>
+  <li>Legal Entities authorize QVIs to issue role credentials</li>
+  <li>Separates OOR (official roles) from ECR (engagement context roles)</li>
+</ul>
+
+<h3 id="5-legal-entities-as-issues">5. Legal Entities as issues</h3>
+
+<ul>
+  <li>Legal Entities can issue their own ECR credentials without a preceeding auth</li>
+</ul>
+
+  </div>
+
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">VLEI Credential Ecosystem Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">VLEI Credential Ecosystem Documentation</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

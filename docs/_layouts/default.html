@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    {%- feed_meta -%}
+    
+    <!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ 
+        startOnLoad: false,
+        theme: 'default'
+      });
+      
+      window.addEventListener("load", function() {
+        // Find all code blocks with mermaid language
+        document.querySelectorAll('pre code.language-mermaid').forEach(function(element) {
+          // Get the text content
+          var graphDefinition = element.textContent;
+          
+          // Create a div to hold the rendered graph
+          var graphDiv = document.createElement('div');
+          graphDiv.className = 'mermaid';
+          graphDiv.textContent = graphDefinition;
+          
+          // Replace the pre element with the new div
+          element.closest('pre').replaceWith(graphDiv);
+        });
+        
+        // Initialize mermaid to render the new divs
+        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+      });
+    </script>
+  </head>
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
