@@ -9,6 +9,10 @@ permalink: /vlei-dependency-graph/
 ## Dependency Graph
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph TD
     %% Define nodes with schema IDs
     GLEIF["GLEIF<br/>Root Authority"]

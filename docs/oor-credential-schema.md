@@ -7,6 +7,10 @@ permalink: /oor-credential-schema/
 # Legal Entity Official Organizational Role vLEI Credential Schema
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 classDiagram
     class OORvLEICredential {
         +string v : Version

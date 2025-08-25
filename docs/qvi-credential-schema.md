@@ -5,6 +5,10 @@ permalink: /qvi-credential-schema/
 ---
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 classDiagram
     class QualifiedvLEIIssuerCredential {
         +string v : Version

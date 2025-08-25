@@ -646,4 +646,31 @@ table td {
   color: #099;
 }
 
+.wrapper {
+  max-width: 1140px;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 1170px;
+  }
+}
+
+.post-content img,
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2em auto;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+}
+
 /*# sourceMappingURL=main.css.map */

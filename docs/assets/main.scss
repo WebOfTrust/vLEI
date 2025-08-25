@@ -3,3 +3,31 @@
 ---
 
 @import "minima";
+
+// Override default content width
+.wrapper {
+  max-width: calc(1200px - (30px * 2));
+  @media screen and (max-width: 1200px) {
+    max-width: calc(1200px - (30px));
+  }
+}
+
+// Make images responsive and allow them to be larger
+.post-content img,
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2em auto;
+}
+
+// Optional: Full-width images with a class
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+}

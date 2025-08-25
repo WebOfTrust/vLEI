@@ -7,8 +7,11 @@ permalink: /vlei-credential-ecosystem/
 # vLEI Credential Ecosystem - Dependencies and Schema Relationships
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 classDiagram
-    %% Core Credential Classes
     class QVICredential {
         +string v : Version
         +string d : Credential SAID
@@ -19,7 +22,6 @@ classDiagram
         +Attributes a : Attributes block
         +Rules r : Rules block
     }
-
     class LECredential {
         +string v : Version
         +string d : Credential SAID
@@ -31,7 +33,6 @@ classDiagram
         +Edges e : Edges block
         +Rules r : Rules block
     }
-
     class OORCredential {
         +string v : Version
         +string d : Credential SAID
@@ -43,7 +44,6 @@ classDiagram
         +Edges e : Edges block
         +Rules r : Rules block
     }
-
     class OORAuthCredential {
         +string v : Version
         +string d : Credential SAID
@@ -55,7 +55,6 @@ classDiagram
         +Edges e : Edges block
         +Rules r : Rules block
     }
-
     class ECRAuthCredential {
         +string v : Version
         +string d : Credential SAID
@@ -67,21 +66,17 @@ classDiagram
         +Edges e : Edges block
         +Rules r : Rules block
     }
-
-    %% Attribute Classes
     class QVIAttributes {
         +string i : QVI Issuee AID
         +string dt : Issuance date time
         +string LEI : LEI of the requesting Legal Entity
         +int gracePeriod : Allocated grace period
     }
-
     class LEAttributes {
         +string i : LE Issuer AID
         +string dt : issuance date time
         +string LEI : LE Issuer AID
     }
-
     class OORAttributes {
         +string i : Person Issuee AID
         +string dt : Issuance date time
@@ -89,7 +84,6 @@ classDiagram
         +string personLegalName : Recipient name as provided during identity assurance
         +string officialRole : Official role title
     }
-
     class AuthAttributes {
         +string i : QVI Issuee AID
         +string dt : Issuance date time
@@ -98,67 +92,48 @@ classDiagram
         +string personLegalName : Requested recipient name as provided during identity assurance
         +string role : Requested role description
     }
-
-    %% Edge Classes
     class QVIEdge {
         +string n : Issuer credential SAID
         +string s : SAID of required schema of the credential pointed to by this node
     }
-
     class LEEdge {
         +string n : Issuer credential SAID
         +string s : SAID of required schema of the credential pointed to by this node
     }
-
     class AuthEdge {
         +string n : Issuer credential SAID
         +string s : SAID of required schema of the credential pointed to by this node
         +string o : Operator for this edge
     }
-
-    %% Rules Classes
     class Rules {
         +UsageDisclaimer usageDisclaimer : Usage Disclaimer
         +IssuanceDisclaimer issuanceDisclaimer : Issuance Disclaimer
         +PrivacyDisclaimer privacyDisclaimer : Privacy Disclaimer
     }
-
-    %% Relationships
     QVICredential --> QVIAttributes : contains
     QVICredential --> Rules : has
-    
     LECredential --> LEAttributes : contains
     LECredential --> QVIEdge : chains to
     LECredential --> Rules : has
-    
     OORCredential --> OORAttributes : contains
     OORCredential --> AuthEdge : authorized by
     OORCredential --> Rules : has
-    
     OORAuthCredential --> AuthAttributes : contains
     OORAuthCredential --> LEEdge : chains to
     OORAuthCredential --> Rules : has
-    
     ECRAuthCredential --> AuthAttributes : contains
     ECRAuthCredential --> LEEdge : chains to
     ECRAuthCredential --> Rules : has
-
-    %% Credential Chain Relationships
     LECredential ..> QVICredential : requires - QVI must exist
     OORCredential ..> OORAuthCredential : requires - needs authorization
     OORAuthCredential ..> LECredential : requires - LE must exist
     ECRAuthCredential ..> LECredential : requires - LE must exist
-
-    %% Schema SAIDs
     note for QVICredential "QVI vLEI Credential<br/>Schema: EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao<br/>Issued by: GLEIF → QVI"
-    
     note for LECredential "Legal Entity vLEI Credential<br/>Schema: ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY<br/>Issued by: QVI → LE"
-    
     note for OORCredential "Official Organizational Role<br/>Schema: EBNaNu-M9P5cgrnfl2Fvymy4E_jvxxyjb70PRtiANlJy<br/>Issued by: QVI → Person"
-    
     note for OORAuthCredential "OOR Authorization<br/>Schema: EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E<br/>Issued by: LE → QVI"
-    
     note for ECRAuthCredential "ECR Authorization<br/>Schema: EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g<br/>Issued by: LE → QVI"
+
 ```
 
 ## Credential Issuance Flow

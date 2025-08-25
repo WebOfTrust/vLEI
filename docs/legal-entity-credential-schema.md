@@ -7,6 +7,10 @@ permalink: /legal-entity-credential-schema/
 # Legal Entity vLEI Credential Schema
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 classDiagram
     class LegalEntityvLEICredential {
         +string v : Version

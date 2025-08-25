@@ -5,22 +5,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home | VLEI Credential Ecosystem Documentation</title>
+<title>Home | vLEI Ecosystem Credential Documentation</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
 <meta property="og:description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
-<link rel="canonical" href="http://localhost:4001/" />
-<meta property="og:url" content="http://localhost:4001/" />
-<meta property="og:site_name" content="VLEI Credential Ecosystem Documentation" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="vLEI Ecosystem Credential Documentation" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"Home","name":"VLEI Credential Ecosystem Documentation","url":"http://localhost:4001/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"Home","name":"vLEI Ecosystem Credential Documentation","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="VLEI Credential Ecosystem Documentation" /><!-- Mermaid JS -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="vLEI Ecosystem Credential Documentation" /><!-- Mermaid JS -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script>
       mermaid.initialize({ 
@@ -51,7 +51,7 @@
 
   <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">VLEI Credential Ecosystem Documentation</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">vLEI Ecosystem Credential Documentation</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -72,25 +72,25 @@
   </header>
 
   <div class="post-content">
-    <h1 id="vlei-credential-ecosystem-documentation">vLEI Credential Ecosystem Documentation</h1>
+    <h1 id="vlei-ecosystem-credential-documentation">vLEI Ecosystem Credential Documentation</h1>
 
-<p>Welcome to the vLEI (verifiable Legal Entity Identifier) credential ecosystem documentation. This documentation covers the implementation of the GLEIF vLEI ecosystem using KERI (Key Event Receipt Infrastructure) and ACDC (Authentic Chained Data Containers).</p>
+<p>This documentation covers the implementation of the GLEIF vLEI ecosystem using KERI (Key Event Receipt Infrastructure) and ACDC (Authentic Chained Data Containers).</p>
 
 <h2 id="documentation-overview">Documentation Overview</h2>
 
 <h3 id="core-documentation">Core Documentation</h3>
 <ul>
-  <li><a href="credentials/">Credentials Overview</a> - Introduction to the credential types and their relationships</li>
-  <li><a href="vlei-credential-ecosystem/">vLEI Credential Ecosystem</a> - Detailed ecosystem architecture and workflows</li>
-  <li><a href="vlei-dependency-graph/">Dependency Graph</a> - Visual representation of credential dependencies</li>
+  <li><a href="credentials.md">Credentials Overview</a> - Introduction to the credential types and their relationships</li>
+  <li><a href="vlei-credential-ecosystem.md">vLEI Credential Ecosystem</a> - Detailed ecosystem architecture and workflows</li>
+  <li><a href="vlei-dependency-graph.md">Dependency Graph</a> - Visual representation of credential dependencies</li>
 </ul>
 
 <h3 id="credential-schemas">Credential Schemas</h3>
 <ul>
-  <li><a href="auth-credential-schemas/">Auth Credential Schema</a> - ECR and OOR authentication credentials</li>
-  <li><a href="legal-entity-credential-schema/">Legal Entity Credential</a> - LE credential schema details</li>
-  <li><a href="qvi-credential-schema/">QVI Credential</a> - Qualified vLEI Issuer credential schema</li>
-  <li><a href="oor-credential-schema/">OOR Credential</a> - Official Organizational Role credential schema</li>
+  <li><a href="auth-credential-schemas.md">Auth Credential Schema</a> - ECR and OOR authentication credentials</li>
+  <li><a href="legal-entity-credential-schema.md">Legal Entity Credential</a> - LE credential schema details</li>
+  <li><a href="qvi-credential-schema.md">QVI Credential</a> - Qualified vLEI Issuer credential schema</li>
+  <li><a href="oor-credential-schema.md">OOR Credential</a> - Official Organizational Role credential schema</li>
 </ul>
 
 <h2 id="quick-start">Quick Start</h2>
@@ -107,53 +107,19 @@
 <h2 id="key-features">Key Features</h2>
 
 <ul>
-  <li><strong>Cryptographic Verification</strong>: All credentials are cryptographically verifiable using KERI</li>
+  <li><strong>Cryptographic Verification</strong>: All credentials are cryptographically end verifiable using KERI</li>
   <li><strong>Chain of Authority</strong>: Clear delegation chains from GLEIF to individual role holders</li>
-  <li><strong>Privacy-Preserving</strong>: Selective disclosure and minimal data exposure</li>
-  <li><strong>Revocation Support</strong>: Built-in credential revocation mechanisms</li>
-  <li><strong>Interoperability</strong>: Standards-based implementation following GLEIF specifications</li>
+  <li><strong>Privacy-Preserving</strong>: Selective disclosure and compact credentials</li>
+  <li><strong>Revocation Support</strong>: Transaction Event Logs capture issuance state</li>
 </ul>
-
-<h2 id="architecture-components">Architecture Components</h2>
-
-<h3 id="keri-infrastructure">KERI Infrastructure</h3>
-<ul>
-  <li>Autonomous Identifier Controllers (AIDs)</li>
-  <li>Key Event Logs (KEL)</li>
-  <li>Witness Networks</li>
-  <li>OOBI (Out-Of-Band-Introduction) resolution</li>
-</ul>
-
-<h3 id="acdc-credentials">ACDC Credentials</h3>
-<ul>
-  <li>Authentic Chained Data Containers</li>
-  <li>Schema-based validation</li>
-  <li>Cryptographic binding to issuers</li>
-  <li>Revocation registries</li>
-</ul>
-
-<h2 id="getting-started-with-development">Getting Started with Development</h2>
-
-<p>This documentation is part of the Kayla wallet implementation. To work with the credential ecosystem:</p>
-
-<ol>
-  <li>Review the <a href="credentials/">Credentials Overview</a> to understand the credential types</li>
-  <li>Study the <a href="vlei-credential-ecosystem/">Ecosystem Documentation</a> for detailed workflows</li>
-  <li>Reference the schema documentation for specific credential implementations</li>
-  <li>Use the <a href="vlei-dependency-graph/">Dependency Graph</a> to understand credential relationships</li>
-</ol>
 
 <h2 id="additional-resources">Additional Resources</h2>
 
 <ul>
-  <li><a href="https://www.gleif.org/en/lei-solutions/gleifs-digital-strategy-for-the-lei/the-vlei-a-new-future-for-the-lei">GLEIF vLEI Documentation</a></li>
-  <li><a href="https://github.com/WebOfTrust/keri">KERI Specification</a></li>
-  <li><a href="https://github.com/WebOfTrust/acdc">ACDC Specification</a></li>
+  <li><a href="https://trustoverip.github.io/tswg-keri-specification/">KERI Specification</a></li>
+  <li><a href="https://trustoverip.github.io/tswg-acdc-specification/">ACDC Specification</a></li>
+  <li><a href="https://trustoverip.github.io/tswg-cesr-specification/">CESR Specification</a></li>
 </ul>
-
-<h2 id="license">License</h2>
-
-<p>This documentation is part of the Kayla wallet project. See the main repository LICENSE file for details.</p>
 
   </div>
 
@@ -164,12 +130,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">VLEI Credential Ecosystem Documentation</h2>
+    <h2 class="footer-heading">vLEI Ecosystem Credential Documentation</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">VLEI Credential Ecosystem Documentation</li></ul>
+          <li class="p-name">vLEI Ecosystem Credential Documentation</li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
