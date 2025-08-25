@@ -74,135 +74,128 @@
   <div class="post-content">
     <h1 id="authorization-vlei-credential-schemas">Authorization vLEI Credential Schemas</h1>
 
-<h2 id="oor-authorization-vlei-credential">OOR Authorization vLEI Credential</h2>
+<p>The vLEI ecosystem uses authorization credentials issued by Legal Entities to QVIs to authorize the issuance of role credentials to individuals. There are two types of authorization credentials:</p>
 
-<pre><code class="language-mermaid">classDiagram
-    class OORAuthvLEICredential {
-        +string v : Version
-        +string d : Credential SAID
-        +string u : One time use nonce
-        +string i : LE Issuer AID
-        +string ri : Credential status registry
-        +string s : Schema SAID
-        +a : Attributes
-        +e : Edges
-        +r : Rules
-    }
+<h2 id="authorization-credential-types">Authorization Credential Types</h2>
 
-    class OORAuthAttributes {
-        +string d : Attributes block SAID
-        +string i : QVI Issuee AID
-        +string dt : Issuance date time
-        +string AID : Recipient AID
-        +string LEI : Legal Entity Identifier
-        +string personLegalName : Recipient name
-        +string officialRole : Role description
-    }
+<h3 id="oor-authorization-credential"><a href="/oor-auth-credential-schema/">OOR Authorization Credential</a></h3>
+<ul>
+  <li><strong>Purpose</strong>: Authorize issuance of Official Organizational Role (OOR) credentials</li>
+  <li><strong>Schema SAID</strong>: <code class="language-plaintext highlighter-rouge">EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E</code></li>
+  <li><strong>Use Case</strong>: Permanent organizational roles (CEO, CFO, Director, etc.)</li>
+</ul>
 
-    class OORAuthEdges {
-        +string d : Edges block SAID
-        +LENode le : Legal Entity reference
-    }
+<h3 id="ecr-authorization-credential"><a href="/ecr-auth-credential-schema/">ECR Authorization Credential</a></h3>
+<ul>
+  <li><strong>Purpose</strong>: Authorize issuance of Engagement Context Role (ECR) credentials</li>
+  <li><strong>Schema SAID</strong>: <code class="language-plaintext highlighter-rouge">EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g</code></li>
+  <li><strong>Use Case</strong>: Context-specific engagements (Project Lead, Consultant, etc.)</li>
+</ul>
 
-    class LENode {
-        +string n : QVI Issuer credential SAID
-        +string s : Required schema SAID
-    }
+<h2 id="authorization-credential-comparison">Authorization Credential Comparison</h2>
 
-    class OORAuthRules {
-        +string d : Rules block SAID
-        +UsageDisclaimer usageDisclaimer
-        +IssuanceDisclaimer issuanceDisclaimer
-    }
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>OOR Authorization</th>
+      <th>ECR Authorization</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Schema SAID</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E</code></td>
+      <td><code class="language-plaintext highlighter-rouge">EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g</code></td>
+    </tr>
+    <tr>
+      <td><strong>Issuer</strong></td>
+      <td>Legal Entity</td>
+      <td>Legal Entity</td>
+    </tr>
+    <tr>
+      <td><strong>Recipient</strong></td>
+      <td>QVI</td>
+      <td>QVI</td>
+    </tr>
+    <tr>
+      <td><strong>Purpose</strong></td>
+      <td>Authorize OOR credential issuance</td>
+      <td>Authorize ECR credential issuance</td>
+    </tr>
+    <tr>
+      <td><strong>Role Field</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">officialRole</code></td>
+      <td><code class="language-plaintext highlighter-rouge">engagementContextRole</code></td>
+    </tr>
+    <tr>
+      <td><strong>Privacy Disclaimer</strong></td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td><strong>Use Case</strong></td>
+      <td>Permanent organizational roles</td>
+      <td>Context-specific engagements</td>
+    </tr>
+  </tbody>
+</table>
 
-    class UsageDisclaimer {
-        +string l : Legal language
-    }
+<h2 id="authorization-flow-overview">Authorization Flow Overview</h2>
 
-    class IssuanceDisclaimer {
-        +string l : Legal language
-    }
+<pre><code class="language-mermaid">sequenceDiagram
+    participant LE as Legal Entity
+    participant QVI as QVI
+    participant Person as Person
 
-    OORAuthvLEICredential --&gt; "1" OORAuthAttributes : contains
-    OORAuthvLEICredential --&gt; "1" OORAuthEdges : contains
-    OORAuthvLEICredential --&gt; "1" OORAuthRules : contains
-    OORAuthEdges --&gt; "1" LENode : references
-    OORAuthRules --&gt; "1" UsageDisclaimer : has
-    OORAuthRules --&gt; "1" IssuanceDisclaimer : has
-
-    note for OORAuthvLEICredential "Schema: EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E\nIssued by LE to QVI\nAuthorizes OOR issuance"
+    rect rgb(240, 240, 255)
+        Note over LE,QVI: OOR Authorization Flow
+        LE-&gt;&gt;QVI: Issue OOR Authorization
+        Note over QVI: Authorizes official role issuance
+    end
     
-    note for LENode "Links to LE credential\nSchema: ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
+    rect rgb(240, 255, 240)
+        Note over LE,QVI: ECR Authorization Flow  
+        LE-&gt;&gt;QVI: Issue ECR Authorization
+        Note over QVI: Authorizes engagement context role issuance
+        Note over QVI: Includes privacy disclaimer
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over QVI,Person: Credential Issuance
+        QVI-&gt;&gt;Person: Issue OOR or ECR Credential
+        Note over Person: Based on received authorization
+    end
 </code></pre>
 
-<h2 id="ecr-authorization-vlei-credential">ECR Authorization vLEI Credential</h2>
+<h2 id="key-architectural-points">Key Architectural Points</h2>
 
-<pre><code class="language-mermaid">classDiagram
-    class ECRAuthvLEICredential {
-        +string v : Version
-        +string d : Credential SAID
-        +string u : One time use nonce
-        +string i : LE Issuer AID
-        +string ri : Credential status registry
-        +string s : Schema SAID
-        +a : Attributes
-        +e : Edges
-        +r : Rules
-    }
+<ol>
+  <li><strong>Both authorization types</strong>:
+    <ul>
+      <li>Are issued by Legal Entities to QVIs</li>
+      <li>Reference the LE credential in their edges</li>
+      <li>Use the I2I (issuer-to-issuer) operator</li>
+      <li>Share similar structure but different purposes</li>
+    </ul>
+  </li>
+  <li><strong>Authorization enables credential issuance</strong>:
+    <ul>
+      <li>QVIs must hold valid authorization to issue role credentials</li>
+      <li>Authorization specifies the person and role being authorized</li>
+      <li>The issued credential chains back to the authorization</li>
+    </ul>
+  </li>
+</ol>
 
-    class ECRAuthAttributes {
-        +string d : Attributes block SAID
-        +string i : QVI Issuee AID
-        +string dt : Issuance date time
-        +string AID : Recipient AID
-        +string LEI : Legal Entity Identifier
-        +string personLegalName : Recipient name
-        +string engagementContextRole : Role description
-    }
+<h2 id="related-documentation">Related Documentation</h2>
 
-    class ECRAuthEdges {
-        +string d : Edges block SAID
-        +LENode le : Legal Entity reference
-    }
-
-    class LENodeECR {
-        +string n : QVI Issuer credential SAID
-        +string s : Required schema SAID
-    }
-
-    class ECRAuthRules {
-        +string d : Rules block SAID
-        +UsageDisclaimer usageDisclaimer
-        +IssuanceDisclaimer issuanceDisclaimer
-        +PrivacyDisclaimer privacyDisclaimer
-    }
-
-    class UsageDisclaimerECR {
-        +string l : Legal language
-    }
-
-    class IssuanceDisclaimerECR {
-        +string l : Legal language
-    }
-
-    class PrivacyDisclaimer {
-        +string l : Privacy considerations text
-    }
-
-    ECRAuthvLEICredential --&gt; "1" ECRAuthAttributes : contains
-    ECRAuthvLEICredential --&gt; "1" ECRAuthEdges : contains
-    ECRAuthvLEICredential --&gt; "1" ECRAuthRules : contains
-    ECRAuthEdges --&gt; "1" LENodeECR : references
-    ECRAuthRules --&gt; "1" UsageDisclaimerECR : has
-    ECRAuthRules --&gt; "1" IssuanceDisclaimerECR : has
-    ECRAuthRules --&gt; "1" PrivacyDisclaimer : has
-
-    note for ECRAuthvLEICredential "Schema: EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g\nIssued by LE to QVI\nAuthorizes ECR issuance"
-    
-    note for LENodeECR "Links to LE credential\nSchema: ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY"
-    
-    note for PrivacyDisclaimer "ECR Auth includes privacy\nconsiderations for IPEX/ACDC"
-</code></pre>
+<ul>
+  <li><a href="/oor-auth-credential-schema/">OOR Auth Credential Schema</a> - Detailed OOR authorization structure</li>
+  <li><a href="/ecr-auth-credential-schema/">ECR Auth Credential Schema</a> - Detailed ECR authorization structure</li>
+  <li><a href="/oor-credential-schema/">OOR Credential Schema</a> - OOR role credentials issued to persons</li>
+  <li><a href="/ecr-credential-schema/">ECR Credential Schema</a> - ECR role credentials issued to persons</li>
+</ul>
 
   </div>
 

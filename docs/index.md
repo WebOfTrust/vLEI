@@ -11,15 +11,17 @@ This documentation covers the implementation of the GLEIF vLEI ecosystem using K
 ## Documentation Overview
 
 ### Core Documentation
-- [Credentials Overview](credentials.md) - Introduction to the credential types and their relationships
-- [vLEI Credential Ecosystem](vlei-credential-ecosystem.md) - Detailed ecosystem architecture and workflows
-- [Dependency Graph](vlei-dependency-graph.md) - Visual representation of credential dependencies
+- [Credentials Overview](/credentials/) - Introduction to the credential types and their relationships
+- [vLEI Credential Ecosystem](/vlei-credential-ecosystem/) - Detailed ecosystem architecture and workflows
+- [Dependency Graph](/vlei-dependency-graph/) - Visual representation of credential dependencies
 
 ### Credential Schemas
-- [Auth Credential Schema](auth-credential-schemas.md) - ECR and OOR authentication credentials
-- [Legal Entity Credential](legal-entity-credential-schema.md) - LE credential schema details
-- [QVI Credential](qvi-credential-schema.md) - Qualified vLEI Issuer credential schema
-- [OOR Credential](oor-credential-schema.md) - Official Organizational Role credential schema
+
+- [Auth Credential Schema](/auth-credential-schemas/) - OOR and ECR authorization credentials
+- [Legal Entity Credential](/legal-entity-credential-schema/) - LE credential schema details
+- [QVI Credential](/qvi-credential-schema/) - Qualified vLEI Issuer credential schema
+- [OOR Credential](/oor-credential-schema/) - Official Organizational Role credential schema
+- [ECR Credential](/ecr-credential-schema/) - Engagement Context Role credential schema
 
 ## Quick Start
 

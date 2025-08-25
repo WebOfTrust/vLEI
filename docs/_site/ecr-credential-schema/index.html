@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ECR Credential Schema | vLEI Ecosystem Credential Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="ECR Credential Schema" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
+<meta property="og:description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
+<link rel="canonical" href="http://localhost:4000/ecr-credential-schema/" />
+<meta property="og:url" content="http://localhost:4000/ecr-credential-schema/" />
+<meta property="og:site_name" content="vLEI Ecosystem Credential Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ECR Credential Schema" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"ECR Credential Schema","url":"http://localhost:4000/ecr-credential-schema/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="vLEI Ecosystem Credential Documentation" /><!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ 
+        startOnLoad: false,
+        theme: 'default'
+      });
+      
+      window.addEventListener("load", function() {
+        // Find all code blocks with mermaid language
+        document.querySelectorAll('pre code.language-mermaid').forEach(function(element) {
+          // Get the text content
+          var graphDefinition = element.textContent;
+          
+          // Create a div to hold the rendered graph
+          var graphDiv = document.createElement('div');
+          graphDiv.className = 'mermaid';
+          graphDiv.textContent = graphDefinition;
+          
+          // Replace the pre element with the new div
+          element.closest('pre').replaceWith(graphDiv);
+        });
+        
+        // Initialize mermaid to render the new divs
+        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+      });
+    </script>
+  </head>
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">vLEI Ecosystem Credential Documentation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/credentials/">Credentials</a><a class="page-link" href="/vlei-credential-ecosystem/">vLEI Credential Ecosystem</a><a class="page-link" href="/vlei-dependency-graph/">vLEI Dependency Graph</a></div>
+      </nav></div>
+</header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ECR Credential Schema</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="engagement-context-role-ecr-vlei-credential-schema">Engagement Context Role (ECR) vLEI Credential Schema</h1>
+
+<h2 id="ecr-vlei-credential-structure">ECR vLEI Credential Structure</h2>
+
+<pre><code class="language-mermaid">---
+config:
+  layout: elk
+---
+classDiagram
+    class ECRvLEICredential {
+        +string v : Version
+        +string d : Credential SAID
+        +string u : One time use nonce
+        +string i : QVI Issuer AID
+        +string ri : Credential status registry
+        +string s : Schema SAID
+        +a : Attributes
+        +e : Edges
+        +r : Rules
+    }
+
+    class Attributes {
+        +string d : Attributes block SAID
+        +string i : Person Issuee AID
+        +string dt : Issuance date time
+        +string LEI : Legal Entity Identifier
+        +string personLegalName : Recipient name
+        +string engagementContextRole : Engagement role title
+    }
+
+    class Edges {
+        +string d : Edges block SAID
+        +AuthNode auth : Authorization chain
+    }
+
+    class AuthNode {
+        +string n : ACDC SAID reference
+        +string s : Required schema SAID
+        +string o : Operator (I2I)
+    }
+
+    class Rules {
+        +string d : Rules block SAID
+        +UsageDisclaimer usageDisclaimer
+        +IssuanceDisclaimer issuanceDisclaimer
+    }
+
+    class UsageDisclaimer {
+        +string l : Legal language about usage
+    }
+
+    class IssuanceDisclaimer {
+        +string l : Legal language about issuance
+    }
+
+    ECRvLEICredential --&gt; "1" Attributes : contains
+    ECRvLEICredential --&gt; "1" Edges : contains
+    ECRvLEICredential --&gt; "1" Rules : contains
+    Edges --&gt; "1" AuthNode : references
+    Rules --&gt; "1" UsageDisclaimer : has
+    Rules --&gt; "1" IssuanceDisclaimer : has
+
+    note for ECRvLEICredential "Schema ID: EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw\nVersion: 1.0.0\nIssued by QVI to Engagement Context Representatives"
+    
+    note for Attributes "Required fields:\ni, dt, LEI, personLegalName, engagementContextRole"
+    
+    note for AuthNode "Links to ECR Auth credential\nSchema: EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g\nOperator: I2I (issuer to issuer)"
+    
+    note for Rules "Standard vLEI disclaimers\nSame as other vLEI credentials"
+</code></pre>
+
+<h2 id="authorization-reference">Authorization Reference</h2>
+
+<p>The ECR vLEI Credential requires an ECR Authorization credential from the Legal Entity. For details on the ECR Authorization structure, see <a href="/ecr-auth-credential-schema/">ECR Auth Credential Schema</a>.</p>
+
+<h2 id="key-characteristics">Key Characteristics</h2>
+
+<ol>
+  <li><strong>Purpose</strong>: ECR credentials are for specific engagement contexts rather than official organizational positions</li>
+  <li><strong>Field Names</strong>: Uses <code class="language-plaintext highlighter-rouge">engagementContextRole</code> for the role description</li>
+  <li><strong>Use Cases</strong>: Temporary or context-specific interactions, project-based roles, consultancy engagements</li>
+</ol>
+
+<h2 id="schema-details">Schema Details</h2>
+
+<h3 id="ecr-vlei-credential">ECR vLEI Credential</h3>
+<ul>
+  <li><strong>Schema SAID</strong>: <code class="language-plaintext highlighter-rouge">EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw</code></li>
+  <li><strong>Version</strong>: 1.0.0</li>
+  <li><strong>Issuer</strong>: QVI (Qualified vLEI Issuer)</li>
+  <li><strong>Recipient</strong>: Person with engagement context role</li>
+  <li><strong>Authorization Required</strong>: ECR Auth credential from LE</li>
+</ul>
+
+<h3 id="authorization-requirements">Authorization Requirements</h3>
+<ul>
+  <li>The QVI must hold a valid ECR Authorization credential from the Legal Entity</li>
+  <li>Authorization Schema SAID: <code class="language-plaintext highlighter-rouge">EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g</code></li>
+  <li>See <a href="/ecr-auth-credential-schema/">ECR Auth Credential Schema</a> for full authorization details</li>
+</ul>
+
+<h2 id="credential-flow">Credential Flow</h2>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant LE as Legal Entity
+    participant QVI as QVI
+    participant Person as Person
+
+    LE-&gt;&gt;QVI: Issue ECR Authorization
+    Note over QVI: See ECR Auth Schema documentation
+    
+    QVI-&gt;&gt;Person: Issue ECR vLEI Credential
+    Note over Person: Schema: EEy9PkikFcANV1l7EHukCeXqrzT1hNZjGlUk7wuMO5jw
+    Note over Person: Chains to ECR Auth via edges.auth
+</code></pre>
+
+  </div>
+
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">vLEI Ecosystem Credential Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">vLEI Ecosystem Credential Documentation</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

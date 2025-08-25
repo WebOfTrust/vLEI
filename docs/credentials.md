@@ -169,7 +169,7 @@ To verify any credential in the ecosystem:
 
 1. **Validate the credential structure** against its schema SAID
 2. **Verify the issuer signature** using KERI
-3. **Check the credential status** in the revocation registry
+3. **Check the credential status** via an Observor deployemt monitoring Transaction Event Log staus
 4. **Follow the edge references** to validate the chain of authority
 5. **Verify each parent credential** recursively up to GLEIF
 
