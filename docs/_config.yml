@@ -13,6 +13,17 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
+# Suppress Sass deprecation warnings
+sass:
+  quiet_deps: true
+  verbose: false
+  style: compressed
+  sourcemap: never
+  
+# Additional settings to minimize output noise  
+quiet: true
+incremental: true
+
 header_pages:
   - index.md
   - credentials.md

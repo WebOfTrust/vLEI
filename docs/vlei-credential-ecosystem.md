@@ -7,10 +7,6 @@ permalink: /vlei-credential-ecosystem/
 # vLEI Credential Ecosystem - Dependencies and Schema Relationships
 
 ```mermaid
----
-config:
-  layout: elk
----
 classDiagram
     class QVICredential {
         +string v : Version
@@ -186,7 +182,7 @@ sequenceDiagram
 
 ### 1. Credential Chaining
 
-- Each credential (except QVI) references its parent through edges
+- Each credential (except QVI) references its chained credentials through edges
 - Ensures verifiable chain of authority from GLEIF down to individual roles
 
 ### 2. Compact credentials

@@ -132,8 +132,8 @@ sequenceDiagram
 
 ### Credential Chaining
 
-- Each credential (except QVI) contains edges that reference its authorizing parent credential
-- Creates a verifiable chain of authority from GLEIF down to individual roles
+- Each credential (except QVI) contains edges that reference its authorizing chained credential
+- Creates a verifiable chain of authority from GLEIF down to individual roles9
 - Enables cryptographic verification of the entire trust chain
 
 ### SAID-Based References
@@ -171,7 +171,7 @@ To verify any credential in the ecosystem:
 2. **Verify the issuer signature** using KERI
 3. **Check the credential status** via an Observor deployemt monitoring Transaction Event Log staus
 4. **Follow the edge references** to validate the chain of authority
-5. **Verify each parent credential** recursively up to GLEIF
+5. **Verify each directed edge (chained credential)** recursively up to GLEIF
 
 ## Use Cases
 

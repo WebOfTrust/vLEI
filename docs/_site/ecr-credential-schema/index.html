@@ -11,32 +11,85 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
 <meta property="og:description" content="Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation" />
-<link rel="canonical" href="http://localhost:4000/ecr-credential-schema/" />
-<meta property="og:url" content="http://localhost:4000/ecr-credential-schema/" />
+<link rel="canonical" href="/ecr-credential-schema/" />
+<meta property="og:url" content="/ecr-credential-schema/" />
 <meta property="og:site_name" content="vLEI Ecosystem Credential Documentation" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="ECR Credential Schema" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"ECR Credential Schema","url":"http://localhost:4000/ecr-credential-schema/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the vLEI (verifiable Legal Entity Identifier) credential ecosystem implementation","headline":"ECR Credential Schema","url":"/ecr-credential-schema/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="vLEI Ecosystem Credential Documentation" /><!-- Mermaid JS -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="vLEI Ecosystem Credential Documentation" /><!-- Mermaid JS with optimized layout -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elkjs/lib/elk.bundled.js"></script>
     <script>
-      mermaid.initialize({ 
-        startOnLoad: false,
-        theme: 'default'
-      });
-      
-      window.addEventListener("load", function() {
+      document.addEventListener("DOMContentLoaded", function() {
+        mermaid.initialize({ 
+          startOnLoad: false,
+          theme: 'default',
+          themeVariables: {
+            primaryColor: '#f9f9f9',
+            primaryTextColor: '#333',
+            primaryBorderColor: '#ccc',
+            lineColor: '#333',
+            secondaryColor: '#f4f4f4',
+            tertiaryColor: '#fff'
+          },
+          // Class diagram specific configuration
+          classDiagram: {
+            htmlLabels: true,
+            useMaxWidth: true,
+            diagramMarginX: 50,
+            diagramMarginY: 50
+          },
+          // Flowchart configuration with ELK support
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            defaultRenderer: 'elk'
+          }
+        });
+        
         // Find all code blocks with mermaid language
         document.querySelectorAll('pre code.language-mermaid').forEach(function(element) {
           // Get the text content
           var graphDefinition = element.textContent;
           
+          // Check if the diagram has ELK layout configuration
+          var hasElkConfig = graphDefinition.includes('---') && graphDefinition.includes('layout: elk');
+          
           // Create a div to hold the rendered graph
           var graphDiv = document.createElement('div');
           graphDiv.className = 'mermaid';
+          
+          // Apply ELK configuration if specified, otherwise use default optimizations
+          var diagramType = graphDefinition.trim().split('\n')[0].toLowerCase();
+          console.log('Processing diagram:', diagramType, 'hasElkConfig:', hasElkConfig);
+          
+          if (hasElkConfig) {
+            // Convert frontmatter ELK config to %%{init}%% directive that Mermaid understands
+            graphDefinition = graphDefinition.replace(/^---[\s\S]*?---\n/, '');
+            // Apply ELK configuration based on diagram type
+            if (diagramType.includes('classdiagram')) {
+              graphDefinition = '%%{init: {"layout": "elk", "elk": {"algorithm": "layered", "direction": "DOWN", "spacing": {"nodeNode": 50}}, "theme": "default"}}%%\n' + graphDefinition;
+              console.log('Applied ELK layout to class diagram');
+            } else if (diagramType.includes('flowchart') || diagramType.includes('graph')) {
+              graphDefinition = '%%{init: {"flowchart": {"defaultRenderer": "elk"}, "elk": {"algorithm": "layered", "direction": "DOWN", "spacing": {"nodeNode": 50, "edgeNode": 20}}, "theme": "default"}}%%\n' + graphDefinition;
+              console.log('Applied ELK layout to flowchart/graph');
+            }
+          } else if (diagramType.includes('flowchart') || diagramType.includes('graph')) {
+            // ELK layout for flowcharts and graphs without explicit config
+            graphDefinition = '%%{init: {"flowchart": {"defaultRenderer": "elk"}, "elk": {"algorithm": "layered", "direction": "DOWN", "spacing": {"nodeNode": 50, "edgeNode": 20}}, "theme": "default"}}%%\n' + graphDefinition;
+            console.log('Applied default ELK layout to flowchart/graph');
+          } else if (diagramType.includes('classdiagram')) {
+            // Optimize class diagrams with better margins and HTML labels
+            graphDefinition = '%%{init: {"classDiagram": {"htmlLabels": true, "useMaxWidth": true, "diagramMarginX": 50, "diagramMarginY": 50}, "theme": "default"}}%%\n' + graphDefinition;
+            console.log('Applied standard layout to class diagram');
+          }
+          
+          console.log('Final graph definition:', graphDefinition.substring(0, 200) + '...');
+          
           graphDiv.textContent = graphDefinition;
           
           // Replace the pre element with the new div

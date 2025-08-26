@@ -1,5 +1,6 @@
-<!-- Mermaid JS -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<!-- Mermaid JS with ELK renderer -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/elkjs/lib/elk.bundled.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     mermaid.initialize({ 
@@ -12,6 +13,10 @@
         lineColor: '#333',
         secondaryColor: '#f4f4f4',
         tertiaryColor: '#fff'
+      },
+      elk: {
+        algorithm: "layered",
+        direction: "DOWN"
       }
     });
     
@@ -20,9 +25,21 @@
       // Get the text content
       var graphDefinition = element.textContent;
       
+      // Check if the diagram has ELK layout configuration and remove it
+      if (graphDefinition.includes('---') && graphDefinition.includes('layout: elk')) {
+        graphDefinition = graphDefinition.replace(/^---[\s\S]*?---\n/, '');
+      }
+      
       // Create a div to hold the rendered graph
       var graphDiv = document.createElement('div');
       graphDiv.className = 'mermaid';
+      
+      // Add ELK directive for better layout, especially for class diagrams
+      var diagramType = graphDefinition.trim().split('\n')[0].toLowerCase();
+      if (diagramType.includes('classdiagram') || diagramType.includes('graph') || diagramType.includes('flowchart')) {
+        graphDefinition = '%%{init: {"elk": {"algorithm": "layered", "direction": "DOWN", "spacing": {"nodeNode": 50}}, "theme": "default"}}%%\n' + graphDefinition;
+      }
+      
       graphDiv.textContent = graphDefinition;
       
       // Replace the pre element with the new div

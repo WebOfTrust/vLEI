@@ -73,13 +73,13 @@ graph TD
 - Role credentials require authorization from Legal Entities
 
 ### 2. **Edge-Based Verification**
-Each credential (except QVI) contains an `edges` block that references parent credentials:
+Each credential (except QVI) contains an `edges` block that references "chained" (directed edge) credentials:
 
 ```json
 "edges": {
-  "parentType": {
-    "n": "Parent credential SAID",
-    "s": "Parent schema SAID (constant)"
+  "chainedCredentialType": {
+    "n": "chained credential SAID",
+    "s": "chained schema SAID (constant)"
   }
 }
 ```
@@ -104,7 +104,7 @@ sequenceDiagram
 To validate any credential, verifiers must:
 1. Check the credential signature and status
 2. Follow edge references up the chain
-3. Validate each parent credential
+3. Validate each chained credential
 4. Ensure unbroken chain to GLEIF root
 
 ## Critical Dependencies
