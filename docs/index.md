@@ -39,6 +39,26 @@ The vLEI ecosystem implements a hierarchical trust model for organizational iden
 - **Privacy-Preserving**: Selective disclosure and compact credentials
 - **Revocation Support**: Transaction Event Logs capture issuance state
 
+## SVG Renderings
+
+Some class diagrams render better using ELK but the config doesn't seem to be picked up by Jekyll.
+
+### Available SVG Diagrams
+
+- [Auth Credential Schemas](auth-credential-schemas.svg) - Authorization credential relationships
+- [Credentials Issuance Schema](credentials-issuance-schema.svg) - Credential issuance process
+- [Credentials Trust Chain](credentials-trust-chain.svg) - Trust chain visualization
+- [ECR Auth Credential Schema](ecr-auth-credential-schema.svg) - ECR authorization credential structure
+- [ECR Credential Schema](ecr-credential-schema.svg) - Engagement Context Role credential structure
+- [Legal Entity Credential Schema](legal-entity-credential-schema.svg) - Legal Entity credential structure
+- [OOR Auth Credential Schema](oor-auth-credential-schema.svg) - OOR authorization credential structure
+- [OOR Credential Schema](oor-credential-schema.svg) - Official Organizational Role credential structure
+- [QVI Credential Schema](qvi-credential-schema.svg) - Qualified vLEI Issuer credential structure
+- [vLEI Credential Ecosystem](vlei-credential-ecosystem.svg) - Complete ecosystem overview
+- [vLEI Dependency Graph](vlei-dependency-graph.svg) - Credential dependency relationships
+
+
+
 ## Additional Resources
 
 - [KERI Specification](https://trustoverip.github.io/tswg-keri-specification/)

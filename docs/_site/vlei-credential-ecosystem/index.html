@@ -127,7 +127,11 @@
   <div class="post-content">
     <h1 id="vlei-credential-ecosystem---dependencies-and-schema-relationships">vLEI Credential Ecosystem - Dependencies and Schema Relationships</h1>
 
-<pre><code class="language-mermaid">classDiagram
+<pre><code class="language-mermaid">---
+config:
+  layout: elk
+---
+classDiagram
     class QVICredential {
         +string v : Version
         +string d : Credential SAID

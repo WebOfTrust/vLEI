@@ -7,6 +7,10 @@ permalink: /vlei-credential-ecosystem/
 # vLEI Credential Ecosystem - Dependencies and Schema Relationships
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 classDiagram
     class QVICredential {
         +string v : Version
