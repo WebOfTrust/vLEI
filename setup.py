@@ -39,7 +39,7 @@ else:
 
 setup(
     name='vlei',
-    version='1.0.0',  # also change in src/vlei/__init__.py
+    version='1.0.1',  # also change in src/vlei/__init__.py
     license='Apache Software License 2.0',
     description='Verifiable Legal Entity Identifier',
     long_description=long_description,
@@ -75,7 +75,7 @@ setup(
     python_requires='>=3.12.6',
     install_requires=[
         'hio==0.6.14',
-        'keri>=1.2.6',
+        'keri>=1.2.7',
         'falcon>=4.0.2',
         'multicommand>=1.0.0'
     ],

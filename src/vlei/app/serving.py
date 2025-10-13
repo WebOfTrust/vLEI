@@ -61,7 +61,8 @@ class WellKnownEnd:
             for file in files:
                 p = Path(oobiDir, file)
                 url = p.open().read()
-                logger.info(f"serving well known {file}: {url}")
+                logger.info(f"serving well known {file}")
+                logger.debug(url)
 
     def on_get(self, req, rep, alias):
         """

@@ -1,6 +1,6 @@
 .PHONY: push-all, build, publish
 
-VERSION=1.0.0
+VERSION=1.0.1
 IMAGE_NAME=gleif/vlei
 LATEST_TAG=$(IMAGE_NAME):latest
 VERSION_TAG=$(IMAGE_NAME):$(VERSION)
@@ -11,7 +11,6 @@ push-all:
 build:
 	@docker build \
 		--platform=linux/amd64,linux/arm64 \
-		--no-cache \
 		-f container/Dockerfile \
 		--tag $(LATEST_TAG) \
 		--tag $(VERSION_TAG) \

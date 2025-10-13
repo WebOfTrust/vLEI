@@ -1,0 +1,10 @@
+.github/
+dist/
+docs/
+flows/
+publish/
+scripts/
+services/
+tests/
+test-vectors/
+vlei-server/
