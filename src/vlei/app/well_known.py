@@ -139,6 +139,8 @@ class WellKnownEnd:
         Parameters:
             oobi_dir (str): Path to the well-known/keri/oobi directory
         """
+        if "keri/oobi" not in oobi_dir:
+            oobi_dir = os.path.join(oobi_dir, "keri", "oobi")
         self.oobi_dir = oobi_dir
         self.index = WellKnownIndex(os.path.join(oobi_dir, "index.json"))
         
@@ -147,6 +149,7 @@ class WellKnownEnd:
     def on_get(self, req, rep, identifier: str):
         """
         Handle GET requests for well-known KERI resources.
+        Assumes the "keri/oobi" path segment is already included in the self.oobi_dir.
         
         Parameters:
             req (Request): Falcon HTTP Request object
