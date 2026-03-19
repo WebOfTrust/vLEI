@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gleif-it.github.io/.well-known/schema.json",
+  "title": "GLEIF Well-Known Resources Schema",
+  "description": "JSON Schema for GLEIF .well-known directory structure",
+  "type": "object",
+  "required": ["$id", "name", "description", "version", "updated", "oobi", "aids", "schemas", "witnesses", "metadata"],
+  "properties": {
+    "$id": {
+      "type": "string",
+      "description": "Self-addressing identifier for this index",
+      "pattern": "^E[A-Za-z0-9_-]{43}$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for this resource collection"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the resources provided"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of this index format",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "updated": {
+      "type": "string",
+      "description": "Last update date in YYYY-MM-DD format",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "oobi": {
+      "type": "string",
+      "description": "Path to the KERI OOBI index",
+      "pattern": "^/keri/oobi/index\\.json$"
+    },
+    "aids": {
+      "type": "object",
+      "description": "GLEIF Autonomic Identifiers",
+      "patternProperties": {
+        "^.+$": {
+          "type": "string",
+          "description": "AID in CESR format",
+          "pattern": "^E[A-Za-z0-9_-]{43}$"
+        }
+      },
+      "minProperties": 1
+    },
+    "schemas": {
+      "type": "object",
+      "description": "vLEI credential schema identifiers",
+      "patternProperties": {
+        "^.+vLEICredential$|^.+Attestation(Schema)?$": {
+          "type": "string",
+          "description": "Schema SAID in CESR format",
+          "pattern": "^E[A-Za-z0-9_-]{43}$"
+        }
+      },
+      "minProperties": 1
+    },
+    "witnesses": {
+      "type": "object",
+      "description": "KERI witness identifiers",
+      "patternProperties": {
+        "^B[A-Za-z0-9_-]{43}$": {
+          "type": "string",
+          "description": "Witness AID in CESR format (self-referential)",
+          "pattern": "^B[A-Za-z0-9_-]{43}$"
+        }
+      },
+      "minProperties": 1
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata about this resource",
+      "required": ["organization", "contact", "documentation"],
+      "properties": {
+        "organization": {
+          "type": "string",
+          "description": "Organization name"
+        },
+        "contact": {
+          "type": "string",
+          "format": "uri",
+          "description": "Contact URL"
+        },
+        "documentation": {
+          "type": "string",
+          "format": "uri",
+          "description": "Documentation URL"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
