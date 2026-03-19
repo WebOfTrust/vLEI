@@ -58,12 +58,6 @@ samples/oobis/.well-known/
   - `WellKnownEnd`: Falcon endpoint handler
   - `loadWellKnownEnds()`: Helper to register endpoints
 
-### Test Coverage
-- **`tests/app/test_well_known.py`**: 15 unit tests with mocked data
-- **`tests/app/test_well_known_samples.py`**: 12 integration tests with real GLEIF data
-
-All 27 tests pass.
-
 ## Usage
 
 ### Serving Well-Known Resources

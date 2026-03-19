@@ -1,6 +1,6 @@
 .PHONY: push-all, build, publish
 
-VERSION=1.0.1
+VERSION=1.0.2
 IMAGE_NAME=gleif/vlei
 LATEST_TAG=$(IMAGE_NAME):latest
 VERSION_TAG=$(IMAGE_NAME):$(VERSION)
