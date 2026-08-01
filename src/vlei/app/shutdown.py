@@ -31,7 +31,7 @@ class GracefulShutdownDoer(doing.Doer):
         logger.info(f"Received SIGINT, throwing interrupt to initiate graceful shutdown.")
         raise KeyboardInterrupt()
 
-    def enter(self):
+    def enter(self, *, temp=None):
         """
         Sets up signal handlers.
         Lifecycle method called once when the Doist running this Doer enters the context for this Doer.

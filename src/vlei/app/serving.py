@@ -11,7 +11,7 @@ from hio.core import http
 from keri import help
 from keri.help import nowIso8601
 
-from vlei.app import caching
+from vlei.app import caching, well_known
 
 logger = help.ogler.getLogger()
 
@@ -48,38 +48,6 @@ class ACDCMaterialEnd:
             rep.data = data.encode("utf-8")
             return
 
-
-class WellKnownEnd:
-    """
-    Returns well known OOBI URLs on HTTP GET in the Location header as a HTTP 301 redirect.
-    The well known OOBI URLs are text files stored in the directory specified by the oobiDir argument.
-    The file name is the alias of the well known OOBI and the content of the file is the URL.
-    """
-    def __init__(self, oobiDir):
-        self.oobiDir = oobiDir
-        for root, dirs, files in os.walk(oobiDir):
-            for file in files:
-                p = Path(oobiDir, file)
-                url = p.open().read()
-                logger.info(f"serving well known {file}")
-                logger.debug(url)
-
-    def on_get(self, req, rep, alias):
-        """
-        Returns the URL of the well known OOBI in the Location header as a HTTP 301 redirect
-
-        Parameters:
-          req (Request): HTTP Request Object
-          rep (Response): HTTP Response Object
-          alias (str): Alias of Well-Known OOBI
-        """
-        p = Path(self.oobiDir, alias)
-        if not p.exists():
-            raise falcon.HTTPBadRequest(title="Unknown well known")
-
-        url = p.open().read()
-        raise falcon.HTTPMovedPermanently(location=url)
-
 class HealthEnd:
     """Health resource for determining that a container is live"""
 
@@ -94,8 +62,7 @@ def loadEnds(app, schemaDir, credDir, oobiDir):
     schemaEnd = ACDCMaterialEnd(schemaDir=schemaDir, credDir=credDir)
     app.add_route("/oobi/{said}", schemaEnd)
 
-    wellknownEnd = WellKnownEnd(oobiDir)
-    app.add_route("/.well-known/keri/oobi/{alias}", wellknownEnd)
+    well_known.loadWellKnownEnds(app, oobiDir)
 
     healthEnd = HealthEnd()
     app.add_route("/health", healthEnd)

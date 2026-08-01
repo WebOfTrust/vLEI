@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gleif-it.github.io/.well-known/keri/oobi/schema.json",
+  "title": "GLEIF KERI OOBI Index Schema",
+  "description": "JSON Schema for GLEIF KERI OOBI directory index structure",
+  "type": "object",
+  "required": ["aids", "witnesses", "schemas"],
+  "properties": {
+    "aids": {
+      "type": "object",
+      "description": "GLEIF Autonomic Identifiers (AIDs)",
+      "patternProperties": {
+        "^GLEIF .+$": {
+          "type": "string",
+          "description": "AID in CESR format (prefix E for Ed25519)",
+          "pattern": "^E[A-Za-z0-9_-]{43}$"
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    },
+    "witnesses": {
+      "type": "object",
+      "description": "KERI witness identifiers (self-referential key-value pairs)",
+      "patternProperties": {
+        "^B[A-Za-z0-9_-]{43}$": {
+          "type": "string",
+          "description": "Witness AID in CESR format (prefix B for Ed25519 non-transferable)",
+          "pattern": "^B[A-Za-z0-9_-]{43}$"
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    },
+    "schemas": {
+      "type": "object",
+      "description": "vLEI credential schema SAIDs mapped by credential type",
+      "patternProperties": {
+        "^.+vLEICredential$|^.+Attestation(Schema)?$": {
+          "type": "string",
+          "description": "Schema SAID in CESR format (prefix E for Blake3-256)",
+          "pattern": "^E[A-Za-z0-9_-]{43}$"
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

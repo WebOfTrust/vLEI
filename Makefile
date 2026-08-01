@@ -1,6 +1,11 @@
-.PHONY: push-all, build, publish
+.PHONY: push-all build publish run setup
 
-VERSION=1.0.1
+VENV ?= venv
+PYTHON ?= python3.12
+VENV_PYTHON := $(VENV)/bin/python
+VLEI_SERVER := $(VENV)/bin/vLEI-server
+
+VERSION=1.0.3
 IMAGE_NAME=gleif/vlei
 LATEST_TAG=$(IMAGE_NAME):latest
 VERSION_TAG=$(IMAGE_NAME):$(VERSION)
@@ -19,3 +24,11 @@ build:
 publish:
 	@docker push $(IMAGE_NAME):latest
 	@docker push $(IMAGE_NAME):$(VERSION)
+
+setup:
+	$(PYTHON) -m venv $(VENV)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	$(VENV_PYTHON) -m pip install -e .
+
+run:
+	$(VLEI_SERVER) -s ./schema/acdc -c ./samples/acdc -o ./samples/oobis/.well-known/keri/oobi
