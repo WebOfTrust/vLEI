@@ -1,4 +1,7 @@
-FROM gleif/keri:1.2.16@sha256:00cb71627b2cb5999d09b2934bd28b3fc762149ae9678fab38698fba7418cd06
+FROM python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+
+RUN apt-get update && apt-get install -y --no-install-recommends libsodium23 curl \
+    && rm -rf /var/lib/apt/lists/*
 
 ENV PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 WORKDIR /vLEI
